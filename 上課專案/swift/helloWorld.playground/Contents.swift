@@ -41,8 +41,27 @@ var occupations = [
     "Malcolm" : "Captain",
     "Kaylee": "Mechanic",
 ]
-
+/*
 occupations["Malcolm"]
 occupations["Kaylee"]
 occupations["kaylee"]
+ */
+UInt8.min
+UInt8.max
+Int8.min
+Int8.max
+Int.min
+Int.max
+//Double 64bit 15數
+//Float 32bit 6個數
 
+let pi:Float = 3.14159678564;
+pi
+let pi1 = 3.14159678564;
+
+pi1
+
+let anotherPi = 3 + 0.14159
+let paddedDouble = 000123.456
+let oneMillion = 1_000_000
+let justOverOneMillion = 1_000_000_000.000_000_1
