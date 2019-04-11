@@ -48,3 +48,19 @@ let http200Status = (statusCode:200, description:"ok")
 
 http200Status.statusCode;
 http200Status.description;
+
+
+let possibleNumber = "123a"
+
+let convertedNumber = Int(possibleNumber)
+
+
+if convertedNumber != nil {
+    print("轉換成功");
+    //繼續工作下去
+}else{
+    print("轉換失敗")
+    //執行錯誤的流程
+}
+
+
