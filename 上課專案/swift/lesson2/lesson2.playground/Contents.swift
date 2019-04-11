@@ -66,3 +66,24 @@ if convertedNumber != nil {
 }
 
 
+var serverResponseCode:Int? = 404
+serverResponseCode = nil;
+
+//使用if先檢查，確定不是nil，再使用force unwrapping打開
+
+if serverResponseCode == nil {
+    print("nil");
+}else{
+    print("serverResponseCode=\(serverResponseCode!)");
+}
+
+//解決方法2 optional binding,同時間檢查，如果成功自動force unwrapping
+
+if let convertedNumber1 = Int(possibleNumber){
+    //成功
+    //convertedNumber1已經自動force unwrapping
+    print(convertedNumber1)
+}else{
+    //失敗
+    print("轉換失敗");
+}
