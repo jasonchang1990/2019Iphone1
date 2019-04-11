@@ -29,5 +29,22 @@ if turnipsAreDelicious {
     print("Eww, turnips are horrible.");
 }
 
+let http404Error = (404, "Not Found")
+//拆解法
+let (statusCode, statusMessage) = http404Error
+print(statusCode)
+print(statusMessage)
 
+let (justTheStatusCode, _) = http404Error;
+print(justTheStatusCode)
 
+//使用索引編號
+
+http404Error.0
+http404Error.1
+
+//使用標籤法
+let http200Status = (statusCode:200, description:"ok")
+
+http200Status.statusCode;
+http200Status.description;
