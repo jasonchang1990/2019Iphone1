@@ -50,14 +50,16 @@ http200Status.statusCode;
 http200Status.description;
 
 
-let possibleNumber = "123a"
+let possibleNumber = "123"
 
 let convertedNumber = Int(possibleNumber)
 
 
 if convertedNumber != nil {
     print("轉換成功");
-    //繼續工作下去
+    let receive = convertedNumber!;//force unwrapping
+    print(receive);
+    
 }else{
     print("轉換失敗")
     //執行錯誤的流程
