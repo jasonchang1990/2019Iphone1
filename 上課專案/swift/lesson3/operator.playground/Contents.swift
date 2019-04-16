@@ -12,3 +12,21 @@ let defaultColorName = "red"
 var userDefinedColorName:String?;
 var colorNametoUser = userDefinedColorName ?? defaultColorName
 
+for index in 1...5{
+    print(index)
+}
+
+let names = ["Anna", "Alex", "Brian", "Jack"]
+let count = names.count
+
+for i in 0..<count{
+    names[i]
+}
+
+for name in names[2...]{
+    print(name)
+}
+
+for name in names[...2]{
+    print(name)
+}
