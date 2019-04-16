@@ -25,3 +25,12 @@ if let firstNumber = Int("4"), let secondNumber = Int("42"),firstNumber < second
     print(firstNumber);
     print(secondNumber);
 }
+
+
+let possibleString:String? = "An optional string."
+//let forceString:String = possibleString
+
+let assumedString:String! = "An implicitly unwrapped optional string."
+if let implicitString = assumedString{
+    print(implicitString);
+}
