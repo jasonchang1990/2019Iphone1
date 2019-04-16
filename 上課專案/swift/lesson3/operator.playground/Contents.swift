@@ -30,3 +30,9 @@ for name in names[2...]{
 for name in names[...2]{
     print(name)
 }
+
+let allowedEntry = false;
+if !allowedEntry {
+    print("ACCESS DENIED");
+}
+
