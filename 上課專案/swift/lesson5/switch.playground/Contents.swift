@@ -54,3 +54,7 @@ func greet(person:[String:String]){
     
     print("name=\(name),location=\(location)");
 }
+
+greet(person: ["name":"John","location":"Cupertino"])
+
+
