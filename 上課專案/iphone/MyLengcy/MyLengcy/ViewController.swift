@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let label = UILabel(frame: CGRect(x: 20, y: 40, width: 100, height: 40))
-        
+        label.text = "您好嗎?"
+        view.addSubview(label)
     }
 
 
