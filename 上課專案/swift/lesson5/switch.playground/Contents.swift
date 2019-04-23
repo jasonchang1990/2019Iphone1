@@ -26,7 +26,7 @@ switch anotherPoint{
         print("x是\(x),y是\(y)");
 }
 
-//binding + where 
+//binding + where
 let yetAnotherPoint = (1, -1)
 switch yetAnotherPoint{
     case let (x, y) where x==y:
@@ -36,4 +36,21 @@ switch yetAnotherPoint{
     case let (x, y):
     print("x=\(x),y=\(y)")
     
+}
+
+//guard else
+func greet(person:[String:String]){
+    guard let name = person["name"] else{
+        print("key沒有name");
+        return
+    }
+    
+    print("Hello \(name)!")
+    
+    guard let location = person["location"] else{
+        print("key沒有location");
+        return;
+    }
+    
+    print("name=\(name),location=\(location)");
 }
