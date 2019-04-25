@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        if window == nil {
+           window = UIWindow(frame: CGRect.zero)
+           window!.backgroundColor = UIColor.brown
+           let viewController = ViewController(nibName: nil, bundle: nil)
+           viewController.view.backgroundColor = UIColor.brown
+           window!.addSubview(viewController.view)
+           window!.makeKeyAndVisible();
+        }else{
+            print("window不是nil");
+        }
         return true
     }
 
