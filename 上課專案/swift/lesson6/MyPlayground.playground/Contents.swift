@@ -88,6 +88,30 @@ func abc(){
 }
 
 
+//funciton的引數名稱和參數名稱
+
+func someFunction(firstParameterName:Int, secondParameterName:Int){
+    
+}
+
+someFunction(firstParameterName: 3, secondParameterName: 2)
+
+func someFunction(argumentLabel parameterName:Int){
+    
+}
+
+someFunction(argumentLabel: 5)
+
+func greet(person:String,from hometown:String) -> String{
+    return "Hello \(person)! Glad you could visit from \(hometown)"
+}
+
+greet(person: "Bill", from: "Cupertino")
+
+//省略引數名稱
+func someFunction(_ firstParameterName:Int, secondParameterName:Int){
+}
+someFunction(5, secondParameterName: 3)
 
 
 
