@@ -33,3 +33,64 @@ func greet(person1:String){
 greet(person1: "Dave")
 
 
+func printAndCount(string:String) -> Int{
+    print(string)
+    return string.count
+}
+
+func printWithoutCounting(string:String){
+    let _ = printAndCount(string: string)
+}
+
+printWithoutCounting(string: "Hello!World!")
+
+//tuple好用的地方
+//傳出多個值
+/*
+func minMax(array:[Int]) -> (min:Int,max:Int){
+    var currentMin = array[0];
+    var currentMax = array[0];
+    for value in array[1..<array.count]{
+        if value < currentMin{
+            currentMin = value
+        }else if value > currentMax{
+            currentMax = value;
+        }
+    }
+    return (currentMin,currentMax)
+    
+}
+
+let bounds = minMax(array: [8, -6, 2, 109, 3, 71])
+bounds.max
+bounds.min
+ */
+func minMax(array:[Int]) -> (min:Int,max:Int)?{
+    if array.isEmpty { return nil }
+    var currentMin = array[0];
+    var currentMax = array[0];
+    for value in array[1..<array.count]{
+        if value < currentMin{
+            currentMin = value
+        }else if value > currentMax{
+            currentMax = value;
+        }
+    }
+    return (currentMin,currentMax)
+    
+}
+func abc(){
+    guard let bounds = minMax(array: [8, -6, 2, 109, 3, 71]) else{
+        return;
+    }
+    bounds.min
+    bounds.max
+}
+
+
+
+
+
+
+
+
