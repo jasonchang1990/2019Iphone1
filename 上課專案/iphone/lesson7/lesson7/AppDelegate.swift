@@ -15,9 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = window ?? UIWindow();
-        self.window!.rootViewController = ViewController();
-        self.window!.makeKeyAndVisible();
+       
+       
+        
+        guard window != nil else{
+            self.window = UIWindow();
+            self.window!.rootViewController = ViewController();
+            self.window!.makeKeyAndVisible();
+            return true;
+        }
+        print("window不是nil,有東西\(window!)");
+        
         return true
     }
 
