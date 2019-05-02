@@ -33,3 +33,10 @@ reverseNames = names.sorted(by: < )
 reverseNames = names.sorted{
     $0 < $1
 }
+
+
+let numbers = [16, 58, 510]
+let numberStrings = numbers.map({
+    (n:Int) -> String in
+    return String(n*2)
+})
