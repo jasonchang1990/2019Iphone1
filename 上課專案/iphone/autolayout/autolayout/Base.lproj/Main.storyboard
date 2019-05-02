@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R4s-m3-jWx">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="KIy-DK-BrG" customClass="ViewController" customModule="autolayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aH-ls-1aa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-FU-y3F">
-                                <rect key="frame" x="99" y="127" width="122" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-FU-y3F">
+                                <rect key="frame" x="20" y="127" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -27,7 +27,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.25882352939999997" green="0.37647058820000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MTg-FU-y3F" firstAttribute="centerX" secondItem="7aH-ls-1aa" secondAttribute="centerX" id="gwQ-CG-9OI"/>
+                            <constraint firstItem="MTg-FU-y3F" firstAttribute="leading" secondItem="eKt-jN-VSJ" secondAttribute="leading" constant="20" id="Z0F-lc-Tlp"/>
+                            <constraint firstItem="eKt-jN-VSJ" firstAttribute="trailing" secondItem="MTg-FU-y3F" secondAttribute="trailing" constant="20" id="jMV-ow-jYb"/>
                             <constraint firstItem="MTg-FU-y3F" firstAttribute="top" secondItem="eKt-jN-VSJ" secondAttribute="top" constant="63" id="uni-cW-6rY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eKt-jN-VSJ"/>
@@ -44,7 +45,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R4s-m3-jWx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Au5-em-NH2">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
