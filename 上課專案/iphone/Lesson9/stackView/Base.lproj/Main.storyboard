@@ -76,10 +76,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="press1" destination="y9W-EH-1ri" id="LuG-24-XhL"/>
+                        <outlet property="press2" destination="IB4-i4-214" id="i5A-Cf-fR2"/>
+                        <outlet property="press3" destination="o9p-Pc-afn" id="NO6-We-IA0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204.375" y="35"/>
+            <point key="canvasLocation" x="212" y="-6"/>
         </scene>
     </scenes>
 </document>

@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var press1:UIButton!;
+    @IBOutlet var press2:UIButton!;
+    @IBOutlet var press3:UIButton!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        press1.setTitle("HOME", for: .normal)
+        press2.setTitle("AWESOME", for: .normal)
+        press3.setTitle("FESTAVEL", for: .normal)
     }
 
 
