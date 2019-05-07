@@ -18,6 +18,16 @@ class ViewController: UIViewController {
         press1.setTitle("HOME", for: .normal)
         press2.setTitle("AWESOME", for: .normal)
         press3.setTitle("FESTAVEL", for: .normal)
+        //target - action
+        press1.addTarget(self, action: #selector(userPress(_:)), for: .touchUpInside)
+        press2.addTarget(self, action: #selector(userPress(_:)), for: .touchUpInside)
+        press3.addTarget(self, action: #selector(userPress(_:)), for: .touchUpInside)
+    }
+    
+    
+    @objc func userPress(_ sender:UIButton){
+        let buttonText = sender.title(for: .normal)!;
+        print(buttonText);
     }
 
 
