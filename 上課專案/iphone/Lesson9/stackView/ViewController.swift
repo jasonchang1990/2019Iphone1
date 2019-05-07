@@ -29,6 +29,11 @@ class ViewController: UIViewController {
         let buttonText = sender.title(for: .normal)!;
         print(buttonText);
     }
+    
+    @IBAction func anotherPress(_ sender:UIButton){
+        let buttonText = sender.title(for: .normal)!;
+        print(buttonText);
+    }
 
 
 }

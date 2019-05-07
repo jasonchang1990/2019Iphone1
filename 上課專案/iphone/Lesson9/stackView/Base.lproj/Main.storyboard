@@ -48,19 +48,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.37647058820000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Press"/>
+                                        <state key="normal" title="Biking"/>
+                                        <connections>
+                                            <action selector="anotherPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dt0-jT-Eeh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMI-Sm-1gp">
                                         <rect key="frame" x="0.0" y="55" width="220" height="30"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.37647058820000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Press"/>
+                                        <state key="normal" title="Cycing"/>
+                                        <connections>
+                                            <action selector="anotherPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1E-Wg-uvY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdP-h1-kzy">
                                         <rect key="frame" x="0.0" y="110" width="220" height="30"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.37647058820000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Press"/>
+                                        <state key="normal" title="forthest"/>
+                                        <connections>
+                                            <action selector="anotherPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lce-P0-5Ol"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
