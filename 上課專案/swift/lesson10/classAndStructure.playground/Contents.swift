@@ -56,4 +56,24 @@ print(currentDirection)
 
 print(rememberedDirection)
 
+//referenct
+let tenEighty = VideoMode();
+tenEighty.resolution = hd;
+tenEighty.interlaced = true;
+tenEighty.name = "1080i";
+tenEighty.frameRate = 25.0;
+
+let alsoTenEighty = tenEighty;
+alsoTenEighty.frameRate = 30.0;
+print(tenEighty.frameRate)
+
+//識別運算子
+//===
+//!===
+//它們是不是搖控同一個實體
+
+if tenEighty === alsoTenEighty {
+    print("它們是搖控同一個實體");
+}
+
 
