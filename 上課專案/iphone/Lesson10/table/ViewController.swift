@@ -10,10 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var button:UIButton!;
+    var cities:[[String:Any]]!;
     
     override func awakeFromNib() {
         super.awakeFromNib();
-        print(button ?? "這實體還沒有建立完成")
+        let plistPath = Bundle.main.path(forResource: "citylist", ofType: "plist")!;
+        cities = NSArray(contentsOfFile: plistPath) as? [[String:Any]]
+        
+        
+        for city in cities{
+            print("城市是:\(city["City"] as! String)");
+            print("國家:\(city["Country"] as! String)");
+            print("州:\(city["Continent"] as! String)");
+            print("緯度:\(city["lat"] as! Double)");
+            print("經度:\(city["long"] as! Double)");
+            print("=======================================");
+        }
     }
     
     override func viewDidLoad() {
