@@ -37,11 +37,16 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
+        return cities.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
+        print("tableView和我要第幾個row:\(indexPath.row)")
+        let city = cities[indexPath.row];
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath);
+        cell.textLabel!.text = city["City"] as? String
+        cell.detailTextLabel!.text = city["Country"] as? String
+        return cell
     }
 
 
