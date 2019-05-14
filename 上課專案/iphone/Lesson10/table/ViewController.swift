@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var button:UIButton!;
+    @IBOutlet var tableView:UITableView!;
     var cities:[[String:Any]]!;
     
     override func awakeFromNib() {
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let plistPath = Bundle.main.path(forResource: "citylist", ofType: "plist")!;
         cities = NSArray(contentsOfFile: plistPath) as? [[String:Any]]
         
-        
+        /*
         for city in cities{
             print("城市是:\(city["City"] as! String)");
             print("國家:\(city["Country"] as! String)");
@@ -26,12 +26,13 @@ class ViewController: UIViewController {
             print("經度:\(city["long"] as! Double)");
             print("=======================================");
         }
+ */
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(button.description)
+        
     }
 
 
