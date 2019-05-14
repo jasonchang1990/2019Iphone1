@@ -46,6 +46,7 @@ class ViewController: UIViewController,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath);
         cell.textLabel!.text = city["City"] as? String
         cell.detailTextLabel!.text = city["Country"] as? String
+        cell.imageView!.image = UIImage(named: city["Image"] as! String)
         return cell
     }
 
