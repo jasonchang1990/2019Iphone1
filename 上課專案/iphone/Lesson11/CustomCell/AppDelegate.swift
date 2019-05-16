@@ -7,15 +7,16 @@
 //
 
 import UIKit
+var myMoneny = 10
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    static var myAppDelegateMoneny = 10;
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        print("10+20:\(add(firstNum: 10, secondNum: 20))");
         return true
     }
 
