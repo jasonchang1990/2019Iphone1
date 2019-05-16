@@ -32,3 +32,37 @@ let stepCounter = StepCounter();
 stepCounter.totalSteps = 200
 
 
+//type property
+struct SomeStructure{
+    static var storedTypeProperty = "some value."
+    static var computedTypeProperty:Int{
+        return 1;
+    }
+}
+
+SomeStructure.storedTypeProperty
+SomeStructure.computedTypeProperty
+
+enum SomeEnumeration{
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty:Int{
+        return 6;
+    }
+}
+
+SomeEnumeration.storedTypeProperty
+SomeEnumeration.computedTypeProperty
+
+class SomeClass{
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty:Int{
+        return 27;
+    }
+    
+    class var overrideableComputedTypeProperty:Int{
+        return 107;
+    }
+}
+
+
+
