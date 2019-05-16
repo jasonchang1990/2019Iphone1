@@ -7,16 +7,19 @@
 //
 
 import UIKit
-var myMoneny = 10
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var myAppDelegateMoneny = 10;
+    
     var window: UIWindow?
-
+    static var citys = [[String:Any]]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print("10+20:\(add(firstNum: 10, secondNum: 20))");
+        let bundle = Bundle.main
+        let pathURL = bundle.url(forResource: "citylist", withExtension: "plist")!
+        AppDelegate.citys = (NSArray(contentsOf: pathURL) as? [[String:Any]]) ?? [[String:Any]]()
+        
         return true
     }
 
