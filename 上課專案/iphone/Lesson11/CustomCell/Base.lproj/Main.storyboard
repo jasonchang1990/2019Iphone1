@@ -28,8 +28,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="ujB-vK-eKt" id="4s3-7R-zIE"/>
-                            <outlet property="delegate" destination="ujB-vK-eKt" id="qdX-S0-wgg"/>
+                            <outlet property="dataSource" destination="ujB-vK-eKt" id="bgN-vk-l3b"/>
+                            <outlet property="delegate" destination="ujB-vK-eKt" id="XZy-nK-61j"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="城市" id="Fmc-5z-YlX"/>

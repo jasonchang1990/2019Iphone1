@@ -13,7 +13,10 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(AppDelegate.citys)
+        /*
+        tableView.delegate = self;
+        tableView.dataSource = self;
+ */
     }
 
 
