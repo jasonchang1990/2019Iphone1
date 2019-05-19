@@ -54,3 +54,5 @@ var occupations = [
 occupations["Malcolm"]
 occupations["Kaylee"]
 occupations["Janye"] = "Public Relations"
+
+
