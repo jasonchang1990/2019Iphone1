@@ -21,7 +21,7 @@ http200Status.statusCode
 http200Status.description
 
 
-
+/*
 let possibleNumber = "123";
 let convertedNumber = Int(possibleNumber)
 
@@ -30,11 +30,16 @@ if convertedNumber != nil{
 }else{
     print("轉換失敗");
 }
-
+*/
 var serverResponseCode:Int? = 404;
 serverResponseCode = nil;
 
-
+let possibleNumber = "123a";
+if let convertedNumber = Int(possibleNumber) {
+    print("轉換後的數值為:\(convertedNumber)");
+}else{
+    print("轉換錯誤");
+}
 
 
 
