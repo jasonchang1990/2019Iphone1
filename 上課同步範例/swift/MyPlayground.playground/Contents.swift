@@ -37,3 +37,20 @@ let quotation = """
 Follow us: @ETtodaynet on Twitter | ETtoday on Facebook"
 """
 print(quotation)
+
+//array
+var shoppingList = ["catfish", "water", "tulips", "blue paint", "bottle"]
+shoppingList[0]
+shoppingList[1] = "bottle of water"
+shoppingList[2]
+shoppingList[3]
+shoppingList[4]
+print(shoppingList)
+
+var occupations = [
+    "Malcolm":"Captain",
+    "Kaylee": "Mechanic"
+]
+occupations["Malcolm"]
+occupations["Kaylee"]
+occupations["Janye"] = "Public Relations"
