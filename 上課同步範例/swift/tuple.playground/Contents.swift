@@ -19,3 +19,24 @@ print(http404Error.1)
 let http200Status = (statusCode: 200, description:"OK")
 http200Status.statusCode
 http200Status.description
+
+
+
+let possibleNumber = "123";
+let convertedNumber = Int(possibleNumber)
+
+if convertedNumber != nil{
+    print("轉換後的數值是:\(convertedNumber!)");
+}else{
+    print("轉換失敗");
+}
+
+var serverResponseCode:Int? = 404;
+serverResponseCode = nil;
+
+
+
+
+
+
+
