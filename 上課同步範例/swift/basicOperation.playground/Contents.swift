@@ -54,8 +54,10 @@ let integerPi = Int(pi)
 typealias AudioSample = UInt16
 var maxAmplitudeFound = AudioSample.min
 
+/*
 //Boolean true,false
 let orangesAreOrange:Bool = true
 let turnipsAreDelicious = false
+ */
 
 
