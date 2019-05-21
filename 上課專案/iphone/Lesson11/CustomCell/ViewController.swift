@@ -37,9 +37,15 @@ extension ViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cityDic = citys[indexPath.row]
         let cityName = cityDic["City"] as! String;
+        let country = cityDic["Country"] as! String;
+        let continent = cityDic["Continent"] as! String;
+        let imageName = cityDic["Image"] as! String;
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath)
-        cell.textLabel!.text = cityName
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! CustomCell
+        cell.cityNameLabel.text = cityName
+        cell.countryNameLabel.text = country
+        cell.continentNameLabel.text = continent
+        cell.cityImageView.image = UIImage(named: imageName)
         return cell;
     }
 }
