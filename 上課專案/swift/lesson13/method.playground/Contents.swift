@@ -75,6 +75,18 @@ enum TriStateSwitch{
 var ovenLight = TriStateSwitch.low;
 ovenLight.next()
 
+struct LevelTracker{
+    static var highestUnlockedLevel = 1
+    var currentLevel = 1
+    
+    static func unlock(_ level:Int){
+        if level > highestUnlockedLevel {
+            highestUnlockedLevel = level
+        }
+    }
+    
+}
+
 
 
 
