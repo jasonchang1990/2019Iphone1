@@ -38,7 +38,7 @@ if somePoint.isToTheRightOf(x: 1.0) {
     print("比較大的");
 }
  */
-
+/*
 struct Point{
     var x = 0.0, y = 0.0
     mutating func moveBy(x deltaX:Double, y deltaY:Double){
@@ -46,9 +46,34 @@ struct Point{
         y += deltaY
     }
 }
+ */
+struct Point{
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX:Double, y deltaY:Double){
+       self = Point(x: x+deltaX, y: y+deltaY)
+    }
+}
+
 
 var somePoint = Point(x: 1.0, y: 1.0)
 somePoint.moveBy(x: 2.0, y: 3.0)
+
+enum TriStateSwitch{
+    case off, low, heigh
+    mutating func next(){
+        switch self{
+        case .off:
+            self = .low
+        case .low:
+            self = .heigh
+        case .heigh:
+            self = .off
+        }
+    }
+}
+
+var ovenLight = TriStateSwitch.low;
+ovenLight.next()
 
 
 
