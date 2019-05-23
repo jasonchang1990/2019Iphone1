@@ -57,17 +57,29 @@ extension ViewController{
         let cityName = city["City"] as! String
         let optionMenu = UIAlertController(
             title: "警告",
-            message: "您選擇的城市是\(cityName)",
-            preferredStyle: .alert)
+            message: "您選擇的城市是\(cityName)\n您想要做什麼",
+            preferredStyle: .actionSheet)
         
         let alertAction_ok = UIAlertAction(
-            title: "ok",
+            title: "沒事",
             style: .default){
                 (alertAction:UIAlertAction) in
                 print("使用都按了OK")
         }
         
+        let alertAction_contact = UIAlertAction(
+            title: "聯絡旅行社",
+            style: .default,
+            handler: nil)
+        
+        let alertAction_cancel = UIAlertAction(
+            title: "取消",
+            style: .cancel, handler:
+            nil)
+        
         optionMenu.addAction(alertAction_ok)
+        optionMenu.addAction(alertAction_contact)
+        optionMenu.addAction(alertAction_cancel)
         present(optionMenu, animated: true){
             print("展示完成");
         }
