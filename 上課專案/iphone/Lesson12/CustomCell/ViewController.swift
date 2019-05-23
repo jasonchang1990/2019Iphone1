@@ -52,6 +52,8 @@ extension ViewController{
 
 extension ViewController{
     //MARK: - UITableViewDelegate
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("indexPath的row:\(indexPath.row)")
+    }
 }
 
