@@ -59,6 +59,21 @@ extension ViewController{
             title: "警告",
             message: "您選擇的城市是\(cityName)",
             preferredStyle: .alert)
+        
+        let alertAction_ok = UIAlertAction(
+            title: "ok",
+            style: .default){
+                (alertAction:UIAlertAction) in
+                print("使用都按了OK")
+        }
+        
+        optionMenu.addAction(alertAction_ok)
+        present(optionMenu, animated: true){
+            print("展示完成");
+        }
+        
+        
+        
     }
 }
 
