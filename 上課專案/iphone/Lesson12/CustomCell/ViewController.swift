@@ -11,12 +11,14 @@ import UIKit
 
 class ViewController: UITableViewController {
     var citys:[[String:Any]]!
+    lazy var cityIsMarked = Array(repeating: false, count: citys.count)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         let bundle = Bundle.main
         let pathURL = bundle.url(forResource: "citylist", withExtension: "plist")!
         citys = NSArray(contentsOf: pathURL) as? [[String:Any]]
-        
+        //cityIsMarked = Array(repeating: false, count: citys.count)
     }
     
     override func viewDidLoad() {
@@ -61,10 +63,16 @@ extension ViewController{
             preferredStyle: .actionSheet)
         
         let alertAction_ok = UIAlertAction(
-            title: "沒事",
+            title: "標示",
             style: .default){
                 (alertAction:UIAlertAction) in
-                print("使用都按了OK")
+                var isMarket = self.cityIsMarked[indexPath.row]
+                isMarket = !isMarket;
+                self.cityIsMarked[indexPath.row] = isMarket;
+                guard let cell = tableView.cellForRow(at: indexPath) else{
+                    return;
+                }
+                cell.accessoryType = isMarket ? .checkmark : .none
         }
         
         let alertAction_contact = UIAlertAction(
