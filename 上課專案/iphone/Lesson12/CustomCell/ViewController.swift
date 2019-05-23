@@ -53,7 +53,12 @@ extension ViewController{
 extension ViewController{
     //MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        print("indexPath的row:\(indexPath.row)")
+        let city = citys[indexPath.row]
+        let cityName = city["City"] as! String
+        let optionMenu = UIAlertController(
+            title: "警告",
+            message: "您選擇的城市是\(cityName)",
+            preferredStyle: .alert)
     }
 }
 
