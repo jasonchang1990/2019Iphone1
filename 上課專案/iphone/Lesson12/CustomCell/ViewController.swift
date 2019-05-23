@@ -69,8 +69,19 @@ extension ViewController{
         
         let alertAction_contact = UIAlertAction(
             title: "聯絡旅行社",
-            style: .default,
-            handler: nil)
+            style: .default){
+                (alertAction:UIAlertAction) -> Void in
+                let busyController = UIAlertController(
+                    title: "警告",
+                    message: "忙線中",
+                    preferredStyle: .alert)
+                let okAction = UIAlertAction(
+                    title: "OK",
+                    style: .default,
+                    handler: nil)
+                busyController.addAction(okAction)
+                self.present(busyController, animated: true, completion: nil)
+        }
         
         let alertAction_cancel = UIAlertAction(
             title: "取消",
