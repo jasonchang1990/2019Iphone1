@@ -12,14 +12,21 @@ func run(){
     var namesOfIntegers = [Int: String]()
     namesOfIntegers[16] = "sixteen"
     print(namesOfIntegers[16] ?? "沒有這個key");
+    namesOfIntegers = [:]
+    print(namesOfIntegers);
+    i = i + 1
+    print(i);
 }
+
+var i = 0;
 
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        run();
+        i = i + 1
+        print(i);
     }
 
 
