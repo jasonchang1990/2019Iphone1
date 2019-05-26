@@ -31,3 +31,6 @@ for item in shoppingList{
     print(item)
 }
 
+for (index,value) in shoppingList.enumerated(){
+    print("index:\(index),value:\(value)");
+}
