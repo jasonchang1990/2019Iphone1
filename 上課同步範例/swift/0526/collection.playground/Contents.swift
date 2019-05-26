@@ -23,7 +23,9 @@ shoppingList[4...6] = ["Bananas", "Apples"]
 print(shoppingList)
 shoppingList.insert("Maple Syrup", at: 0)
 print(shoppingList)
-let _ = shoppingList.remove(at: 0)
+let _ = shoppingList.remove(at: 50)
+    
+
 print(shoppingList)
 shoppingList[0]
 let apples = shoppingList.removeLast()
@@ -75,4 +77,8 @@ oddDigits.intersection(evenDigits).sorted()
 oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
 
 oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
+
+
+//diction
+
 
