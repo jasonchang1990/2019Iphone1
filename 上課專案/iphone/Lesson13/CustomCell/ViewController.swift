@@ -52,7 +52,17 @@ extension ViewController{
     }
     //2
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-        
+        //4
+        if editingStyle == .delete {
+            let deleteIndex = indexPath.row
+            citys.remove(at: deleteIndex)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            /*
+            
+            tableView.reloadData();
+ */
+            //4 end
+        }
         
     }
     //2end--------
