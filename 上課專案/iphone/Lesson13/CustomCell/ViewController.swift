@@ -23,10 +23,10 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        tableView.delegate = self;
-        tableView.dataSource = self;
- */
+        //1-------
+        navigationItem.title = "每一個城市";
+        navigationItem.rightBarButtonItem = editButtonItem;
+        //end1--------
     }
 }
 
@@ -50,12 +50,21 @@ extension ViewController{
         cell.cityImageView.image = UIImage(named: imageName)
         return cell;
     }
+    //2
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        
+        
+    }
+    //2end--------
 }
 
 extension ViewController{
     //MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let city = citys[indexPath.row]
+        //3
+        navigationItem.title = city["City"] as? String
+        //3end
         let cityName = city["City"] as! String
         let optionMenu = UIAlertController(
             title: "警告",
