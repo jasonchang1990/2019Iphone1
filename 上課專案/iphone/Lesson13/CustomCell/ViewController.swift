@@ -131,10 +131,25 @@ extension ViewController{
             title: "刪除"
         ){
             (action:UITableViewRowAction,indexPath:IndexPath) -> Void in
-            print("刪除的動作");
+            let deleteIndex = indexPath.row
+            self.citys.remove(at: deleteIndex)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.cityIsMarked.remove(at: deleteIndex)
         }
         
-        return [deleteAction]
+        let shareAction = UITableViewRowAction(
+            style: .default,
+            title: "分享") { (action:UITableViewRowAction, indexPath:IndexPath) in
+                let defaultText = "請直接打電話給" + (self.citys[indexPath.row]["City"] as! String);
+                let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+        }
+        let r = 48.0;
+        
+        let b = 99.0
+        shareAction.backgroundColor = UIColor(red: CGFloat(r)/255.0, green: 173.0/255.0, blue: CGFloat(b) / 255.0, alpha: 1.0)
+        
+        return [deleteAction,shareAction]
     }
 }
 
