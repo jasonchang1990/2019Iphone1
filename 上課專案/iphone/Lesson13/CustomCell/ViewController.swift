@@ -50,22 +50,21 @@ extension ViewController{
         cell.cityImageView.image = UIImage(named: imageName)
         return cell;
     }
-    //2
+    //30_1
+    /*
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-        //4
+        
         if editingStyle == .delete {
             let deleteIndex = indexPath.row
             citys.remove(at: deleteIndex)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            /*
+           
             
-            tableView.reloadData();
- */
-            //4 end
         }
         
     }
-    //2end--------
+ */
+    
 }
 
 extension ViewController{
@@ -124,6 +123,18 @@ extension ViewController{
         
         
         
+    }
+    //30_1
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?{
+        let deleteAction = UITableViewRowAction(
+            style: .default,
+            title: "刪除"
+        ){
+            (action:UITableViewRowAction,indexPath:IndexPath) -> Void in
+            print("刪除的動作");
+        }
+        
+        return [deleteAction]
     }
 }
 
