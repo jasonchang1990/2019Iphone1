@@ -69,6 +69,7 @@ extension ViewController{
 
 extension ViewController{
     //MARK: - UITableViewDelegate
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let city = citys[indexPath.row]
         //3
@@ -124,7 +125,25 @@ extension ViewController{
         
         
     }
-    //30_1
+ */
+    //30_2
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        /*
+         //只有使用到class
+        let cityDetailViewController = CiteDetailViewController(nibName: nil, bundle: nil);
+        cityDetailViewController.view.backgroundColor = UIColor.brown;
+        navigationController!.pushViewController(cityDetailViewController, animated: true);
+ */
+        /*
+        //class + storyboard + coding
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vcityDetailViewController = storyboard.instantiateViewController(withIdentifier: "CityDetail")
+        navigationController!.pushViewController(vcityDetailViewController, animated: true)
+ */
+        //using storyboard
+    }
+    
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?{
         let deleteAction = UITableViewRowAction(
             style: .default,
