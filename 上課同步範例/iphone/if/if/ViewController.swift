@@ -26,8 +26,12 @@ class ViewController: UIViewController {
         }else{
            temperatureField.text = "打錯了啦"
         }
-            
-     }
+     temperatureField.endEditing(true)
+   }
+    
+    @IBAction func userFocus(){
+        temperatureField.text = "";
+    }
     
     
 
