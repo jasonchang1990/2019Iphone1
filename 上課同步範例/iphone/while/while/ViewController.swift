@@ -23,7 +23,7 @@ func runWhile(){ //function
     var square = 0;
     var diceRoll = 0;
     var i = 0;
-    while square < finalSquare{
+    repeat {
         i += 1;
         diceRoll += 2;
         if diceRoll >= 7 {
@@ -35,7 +35,7 @@ func runWhile(){ //function
         if square < board.count{
             square += board[square];
         }
-    }
+    }while square < finalSquare
     
     print("game over!")
     print("執行的次數\(i)");
