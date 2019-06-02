@@ -42,3 +42,27 @@ switch somePoint{
     default:
         print("超出範圍");
 }
+
+//value binding
+let anotherPoint = (5, 2);
+switch anotherPoint{
+case (let x, 0):
+    print("x:\(x),y=0");
+case (0, let y):
+    print("x=0,y:\(y)");
+case let (x, y):
+    print("x=\(x), y=\(y)");
+}
+
+
+//where
+let yetAnotherPoint = (1, 2)
+switch yetAnotherPoint {
+case let (x,y) where x == y:
+    print("x==y");
+case let (x,y) where x == -y:
+    print("x==-y");
+case let (x,y):
+    print("x=\(x),y=\(y)");
+
+}
