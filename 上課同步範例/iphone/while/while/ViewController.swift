@@ -8,11 +8,17 @@
 
 import UIKit
 
+func run(){
+  let abc = 10;
+    print(abc);
+}
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        run();
     }
 
 
