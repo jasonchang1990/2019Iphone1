@@ -17,8 +17,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func userPress(){
-        print("使用者填了:\(temperatureField.text!)");
-    }
+        if let textValue = temperatureField.text, textValue != "", let temperatureValue = Int(textValue) {
+            if temperatureValue <= 32 {
+                temperatureField.text = "非常冷"
+            }else{
+                temperatureField.text = "不冷"
+            }
+        }else{
+           temperatureField.text = "打錯了啦"
+        }
+            
+     }
+    
+    
 
 }
 
