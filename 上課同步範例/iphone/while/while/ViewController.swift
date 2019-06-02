@@ -8,7 +8,7 @@
 
 import UIKit
 
-func runWhile(){
+func runWhile(){ //function
     let finalSquare = 25;
     var board = [Int](repeating: 0, count: finalSquare + 1)
     board[03] = +08;
@@ -46,6 +46,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    
+    @IBAction func userPressPlayGame(){//method 方法
+        print("userPress");
         runWhile();
     }
 
