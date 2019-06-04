@@ -12,8 +12,15 @@ class CiteDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        /*
+        let myButton1 = MyButton(title: "myButton1")
+        myButton1.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        view.addSubview(myButton1)
+        
+        let myButton2 = MyButton(title: "myButton2", forgroundColor: UIColor.black, backgroundColor: UIColor.lightGray, buttonCount: 5);
+        myButton2.frame = CGRect(x: 100, y: 200, width: 100, height: 50)
+        view.addSubview(myButton2)
+ */
     }
     
 

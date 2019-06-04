@@ -14,6 +14,8 @@ class CustomCell: UITableViewCell {
     @IBOutlet var countryNameLabel:UILabel!
     @IBOutlet var continentNameLabel:UILabel!
     
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

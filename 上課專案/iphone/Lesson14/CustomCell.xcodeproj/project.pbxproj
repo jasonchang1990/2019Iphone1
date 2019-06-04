@@ -15,6 +15,7 @@
 		E165528A228D8CFD0077A421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1655288228D8CFD0077A421 /* LaunchScreen.storyboard */; };
 		E1655292228D8DAC0077A421 /* citylist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1655291228D8DAC0077A421 /* citylist.plist */; };
 		E1673D8E22A014CC007902A7 /* CiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1673D8D22A014CC007902A7 /* CiteDetailViewController.swift */; };
+		E1D8ED0F22A6A19C0057834C /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8ED0E22A6A19C0057834C /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E165528B228D8CFD0077A421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1655291228D8DAC0077A421 /* citylist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = citylist.plist; path = "../../../../iOS行動程式基礎開發上架20堂課/第10堂課建立以表格為基礎的App/資源檔/citylist.plist"; sourceTree = "<group>"; };
 		E1673D8D22A014CC007902A7 /* CiteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiteDetailViewController.swift; sourceTree = "<group>"; };
+		E1D8ED0E22A6A19C0057834C /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E165528B228D8CFD0077A421 /* Info.plist */,
 				E1388B2922943579002F92B1 /* CustomCell.swift */,
 				E1673D8D22A014CC007902A7 /* CiteDetailViewController.swift */,
+				E1D8ED0E22A6A19C0057834C /* MyButton.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			files = (
 				E1673D8E22A014CC007902A7 /* CiteDetailViewController.swift in Sources */,
 				E1655282228D8CFC0077A421 /* ViewController.swift in Sources */,
+				E1D8ED0F22A6A19C0057834C /* MyButton.swift in Sources */,
 				E1388B2A22943579002F92B1 /* CustomCell.swift in Sources */,
 				E1655280228D8CFC0077A421 /* AppDelegate.swift in Sources */,
 			);

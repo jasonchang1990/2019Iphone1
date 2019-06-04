@@ -12,22 +12,11 @@ import UIKit
 class ViewController: UITableViewController {
     var citys:[[String:Any]]!
     lazy var cityIsMarked = Array(repeating: false, count: citys.count)
-    var myCount:Int!;
-    /*
-    init(myCount:Int){
-        self.myCount = myCount;
-        super.init(nibName: nil, bundle: nil)
-    }
+   
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        //fatalError("init(coder:) has not been implemented")
-        self.init(myCount:5)
-    }
- */
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        myCount = 5;
+        super.awakeFromNib()       
         let bundle = Bundle.main
         let pathURL = bundle.url(forResource: "citylist", withExtension: "plist")!
         citys = NSArray(contentsOf: pathURL) as? [[String:Any]]
