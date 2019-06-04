@@ -12,9 +12,22 @@ import UIKit
 class ViewController: UITableViewController {
     var citys:[[String:Any]]!
     lazy var cityIsMarked = Array(repeating: false, count: citys.count)
+    var myCount:Int!;
+    /*
+    init(myCount:Int){
+        self.myCount = myCount;
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        //fatalError("init(coder:) has not been implemented")
+        self.init(myCount:5)
+    }
+ */
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        myCount = 5;
         let bundle = Bundle.main
         let pathURL = bundle.url(forResource: "citylist", withExtension: "plist")!
         citys = NSArray(contentsOf: pathURL) as? [[String:Any]]
@@ -50,83 +63,11 @@ extension ViewController{
         cell.cityImageView.image = UIImage(named: imageName)
         return cell;
     }
-    //30_1
-    /*
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-        
-        if editingStyle == .delete {
-            let deleteIndex = indexPath.row
-            citys.remove(at: deleteIndex)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-           
-            
-        }
-        
-    }
- */
-    
+   
 }
 
 extension ViewController{
-    //MARK: - UITableViewDelegate
-    /*
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let city = citys[indexPath.row]
-        //3
-        navigationItem.title = city["City"] as? String
-        //3end
-        let cityName = city["City"] as! String
-        let optionMenu = UIAlertController(
-            title: "警告",
-            message: "您選擇的城市是\(cityName)\n您想要做什麼",
-            preferredStyle: .actionSheet)
-        
-        let alertAction_ok = UIAlertAction(
-            title: "標示",
-            style: .default){
-                (alertAction:UIAlertAction) in
-                var isMarket = self.cityIsMarked[indexPath.row]
-                isMarket = !isMarket;
-                self.cityIsMarked[indexPath.row] = isMarket;
-                guard let cell = tableView.cellForRow(at: indexPath) else{
-                    return;
-                }
-                cell.accessoryType = isMarket ? .checkmark : .none
-        }
-        
-        let alertAction_contact = UIAlertAction(
-            title: "聯絡旅行社",
-            style: .default){
-                (alertAction:UIAlertAction) -> Void in
-                let busyController = UIAlertController(
-                    title: "警告",
-                    message: "忙線中",
-                    preferredStyle: .alert)
-                let okAction = UIAlertAction(
-                    title: "OK",
-                    style: .default,
-                    handler: nil)
-                busyController.addAction(okAction)
-                self.present(busyController, animated: true, completion: nil)
-        }
-        
-        let alertAction_cancel = UIAlertAction(
-            title: "取消",
-            style: .cancel, handler:
-            nil)
-        
-        optionMenu.addAction(alertAction_ok)
-        optionMenu.addAction(alertAction_contact)
-        optionMenu.addAction(alertAction_cancel)
-        present(optionMenu, animated: true){
-            print("展示完成");
-        }
-        
-        
-        
-    }
- */
-    //30_2
+  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         /*
          //只有使用到class
