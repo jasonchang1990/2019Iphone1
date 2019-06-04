@@ -17,15 +17,16 @@ class Bicycle:Vehicle{
     }
 }
 
-let bicycle = Bicycle();
+let bicycle = Vehicle();
 print("Bicycle:\(bicycle.description)");
 
 
-class Hoverboard:Vehicle{
+class Hoverboard:Bicycle{
     var color:String;
     init(color:String){
         self.color = color;
-        super.init();
+        //super.init();
+        
     }
     
     override var description:String{
@@ -36,3 +37,38 @@ class Hoverboard:Vehicle{
 
 let hoverboard = Hoverboard(color: "silver")
 print("Hoverboard:\(hoverboard.description)");
+
+//自動繼承
+
+class Food{
+    var name:String;
+    init(name:String){
+        self.name = name;
+    }
+    convenience init(){
+        self.init(name:"[noName]")
+    }
+}
+
+let namedMeat = Food(name: "Bacon")
+let mysteryMeat = Food();
+
+class RecipeIngredient:Food{
+    var quantity:Int;
+    init(name:String, quantity:Int){
+        self.quantity = quantity;
+        super.init(name: name)
+    }
+    
+    override convenience init(name:String){
+        self.init(name:name, quantity:1);
+    }
+    
+    
+}
+
+let oneMySteryItem = RecipeIngredient();
+let oneBacon = RecipeIngredient(name: "Bancon")
+let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+
+
