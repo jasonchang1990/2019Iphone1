@@ -9,29 +9,16 @@
 import UIKit
 
 class CiteDetailViewController: UIViewController {
-
+    //0604
+    var imageName:String!;
+    @IBOutlet var cityImageView:UIImageView!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        let myButton1 = MyButton(title: "myButton1")
-        myButton1.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
-        view.addSubview(myButton1)
-        
-        let myButton2 = MyButton(title: "myButton2", forgroundColor: UIColor.black, backgroundColor: UIColor.lightGray, buttonCount: 5);
-        myButton2.frame = CGRect(x: 100, y: 200, width: 100, height: 50)
-        view.addSubview(myButton2)
- */
+        cityImageView.image = UIImage(named: imageName)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

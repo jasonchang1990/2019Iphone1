@@ -30,6 +30,17 @@ class ViewController: UITableViewController {
         navigationItem.rightBarButtonItem = editButtonItem;
         //end1--------
     }
+    //0604
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goDetail" {
+            let detailViewController = segue.destination as! CiteDetailViewController
+            let indexPath = tableView.indexPathForSelectedRow!;
+            let city = citys[indexPath.row]
+            
+            detailViewController.imageName = city["Image"] as? String;
+            
+        }
+    }
 }
 
 extension ViewController{
