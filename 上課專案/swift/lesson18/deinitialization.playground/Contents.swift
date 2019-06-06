@@ -38,6 +38,14 @@ playerOne!.coinsInPurse
 Bank.coinsInBank
 
 playerOne = nil;
+//if let coinsInPurse = playerOne!.coinsInPurse
+if let coinsInPurse = playerOne?.coinsInPurse {
+    print("執行成功");
+}
 Bank.coinsInBank
+
+
+
+
 
 
