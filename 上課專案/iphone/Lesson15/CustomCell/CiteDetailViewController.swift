@@ -9,7 +9,10 @@
 import UIKit
 
 class CiteDetailViewController: UIViewController {
+    
     //0606
+    @IBOutlet var tableView:UITableView!;
+    
     var city:City!;
     @IBOutlet var cityImageView:UIImageView!;
     

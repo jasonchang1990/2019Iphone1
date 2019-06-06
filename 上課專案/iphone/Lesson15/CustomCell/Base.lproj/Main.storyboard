@@ -93,21 +93,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DEz-nA-Aeq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="222"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="olj-VS-cac">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nWd-OW-rbg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.45833950750000002" green="1" blue="0.67446561459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DEz-nA-Aeq" firstAttribute="top" secondItem="9e8-Oi-qNL" secondAttribute="top" id="1zw-EW-tae"/>
-                            <constraint firstItem="DEz-nA-Aeq" firstAttribute="trailing" secondItem="M2t-1R-TNg" secondAttribute="trailing" id="bfP-gQ-kw8"/>
-                            <constraint firstItem="DEz-nA-Aeq" firstAttribute="bottom" secondItem="M2t-1R-TNg" secondAttribute="bottom" constant="-258" id="psX-N1-Ey1"/>
-                            <constraint firstItem="DEz-nA-Aeq" firstAttribute="leading" secondItem="M2t-1R-TNg" secondAttribute="leading" id="rhR-b8-dhB"/>
+                            <constraint firstItem="olj-VS-cac" firstAttribute="leading" secondItem="M2t-1R-TNg" secondAttribute="leading" id="Nip-XD-fce"/>
+                            <constraint firstItem="olj-VS-cac" firstAttribute="trailing" secondItem="M2t-1R-TNg" secondAttribute="trailing" id="pKH-tu-Cgi"/>
+                            <constraint firstItem="olj-VS-cac" firstAttribute="bottom" secondItem="M2t-1R-TNg" secondAttribute="bottom" id="pR0-ih-mus"/>
+                            <constraint firstItem="olj-VS-cac" firstAttribute="top" secondItem="9e8-Oi-qNL" secondAttribute="top" id="r8s-Ga-YuL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M2t-1R-TNg"/>
                     </view>
                     <connections>
-                        <outlet property="cityImageView" destination="DEz-nA-Aeq" id="ZDi-Hd-Gzc"/>
+                        <outlet property="cityImageView" destination="nWd-OW-rbg" id="Bdr-xs-GMF"/>
+                        <outlet property="tableView" destination="olj-VS-cac" id="y7x-YJ-faf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oId-lc-VWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
