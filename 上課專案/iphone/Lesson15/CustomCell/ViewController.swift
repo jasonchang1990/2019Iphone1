@@ -10,7 +10,8 @@ import UIKit
 
 
 class ViewController: UITableViewController {
-    var citys:[[String:Any]]!
+    //0606
+    var citys = [City]()
     lazy var cityIsMarked = Array(repeating: false, count: citys.count)
    
     
@@ -19,25 +20,38 @@ class ViewController: UITableViewController {
         super.awakeFromNib()       
         let bundle = Bundle.main
         let pathURL = bundle.url(forResource: "citylist", withExtension: "plist")!
-        citys = NSArray(contentsOf: pathURL) as? [[String:Any]]
+        //0606
+        let citysDic = NSArray(contentsOf: pathURL) as? [[String:Any]]
+        for cityDic in citysDic!{
+            let city = City();
+            city.city = cityDic["City"] as! String;
+            city.country = cityDic["Country"] as! String;
+            city.continent = cityDic["Continent"] as! String;
+            city.image = cityDic["Image"] as! String;
+            city.local = cityDic["Local"] as! String;
+            city.url = cityDic["url"] as! String;
+            city.latitude = cityDic["lat"] as! Double;
+            city.longitude = cityDic["long"] as! Double;
+            citys.append(city)
+        }
         //cityIsMarked = Array(repeating: false, count: citys.count)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //1-------
+        
         navigationItem.title = "每一個城市";
         navigationItem.rightBarButtonItem = editButtonItem;
-        //end1--------
+        
     }
-    //0604
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goDetail" {
             let detailViewController = segue.destination as! CiteDetailViewController
             let indexPath = tableView.indexPathForSelectedRow!;
             let city = citys[indexPath.row]
-            
-            detailViewController.imageName = city["Image"] as? String;
+            //0606
+            detailViewController.imageName = city.image;
             
         }
     }
@@ -50,11 +64,11 @@ extension ViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cityDic = citys[indexPath.row]
-        let cityName = cityDic["City"] as! String;
-        let country = cityDic["Country"] as! String;
-        let continent = cityDic["Continent"] as! String;
-        let imageName = cityDic["Image"] as! String;
+        let city = citys[indexPath.row]
+        let cityName = city.city
+        let country = city.country
+        let continent = city.continent
+        let imageName = city.image
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! CustomCell
         cell.cityNameLabel.text = cityName
@@ -100,7 +114,8 @@ extension ViewController{
         let shareAction = UITableViewRowAction(
             style: .default,
             title: "分享") { (action:UITableViewRowAction, indexPath:IndexPath) in
-                let defaultText = "請直接打電話給" + (self.citys[indexPath.row]["City"] as! String);
+                //0606
+                let defaultText = "請直接打電話給" + (self.citys[indexPath.row].city );
                 let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
                 self.present(activityController, animated: true, completion: nil)
         }
