@@ -51,7 +51,7 @@ class ViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow!;
             let city = citys[indexPath.row]
             //0606
-            detailViewController.imageName = city.image;
+            detailViewController.city = city
             
         }
     }

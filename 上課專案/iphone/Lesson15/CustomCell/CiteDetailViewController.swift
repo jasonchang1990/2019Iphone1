@@ -9,13 +9,14 @@
 import UIKit
 
 class CiteDetailViewController: UIViewController {
-    //0604
-    var imageName:String!;
+    //0606
+    var city:City!;
     @IBOutlet var cityImageView:UIImageView!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cityImageView.image = UIImage(named: imageName)
+        //0606
+        cityImageView.image = UIImage(named: city.image)
     }
     
 
