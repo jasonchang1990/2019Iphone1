@@ -10,7 +10,7 @@ import UIKit
 
 class CiteDetailViewController: UIViewController {
     
-    //0606
+    
     @IBOutlet var tableView:UITableView!;
     var city:City!;
     
@@ -22,6 +22,9 @@ class CiteDetailViewController: UIViewController {
         cityImageView.image = UIImage(named: city.image)
         //0611
         title = city.city;
+        
+        tableView.estimatedRowHeight = 38.0;
+        tableView.rowHeight = UITableView.automaticDimension;
     }
     
 
