@@ -35,20 +35,26 @@ extension CiteDetailViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath);
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! DetailViewCell;
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = city.continent;
+            cell.fieldLabel.text = "五大州"
+            cell.valueLabel.text = city.continent;
         case 1:
-            cell.textLabel?.text = city.country;
+            cell.fieldLabel.text = "國家"
+            cell.valueLabel.text = city.country;
         case 2:
-            cell.textLabel?.text = city.local;
+            cell.fieldLabel.text = "說明"
+            cell.valueLabel.text = city.local;
         case 3:
-            cell.textLabel?.text = String(city.latitude);
+            cell.fieldLabel.text = "緯度"
+            cell.valueLabel.text = String(city.latitude);
         case 4:
-            cell.textLabel?.text = String(city.longitude);
+            cell.fieldLabel.text = "經度"
+            cell.valueLabel.text = String(city.longitude);
         case 5:
-            cell.textLabel?.text = city.url;
+            cell.fieldLabel.text = "網址"
+            cell.valueLabel.text = city.url;
         
         default:
             break
