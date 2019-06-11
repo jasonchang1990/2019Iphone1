@@ -12,14 +12,16 @@ class CiteDetailViewController: UIViewController {
     
     //0606
     @IBOutlet var tableView:UITableView!;
-    
     var city:City!;
+    
     @IBOutlet var cityImageView:UIImageView!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //0606
+        
         cityImageView.image = UIImage(named: city.image)
+        //0611
+        title = city.city;
     }
     
 
