@@ -53,3 +53,40 @@ class VendingMachine{
         print("Dispensing\(name)");
     }
 }
+
+
+//向父method丟出錯誤
+
+let favoriteSnacks = [
+    "Alice": "Chips",
+    "Bob": "Licorice",
+    "Eve": "Pretzels"
+]
+
+func buyFavoriteSnack(person:String, vendingMachine:VendingMachine) throws{
+    let snackName = favoriteSnacks[person] ?? "Candy Bar"
+    try vendingMachine.vend(itemNamed: snackName)
+}
+
+var vendingMachine = VendingMachine();
+vendingMachine.coinsDeposited = 8;
+/*
+do{
+  try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
+}catch VendingMachineError.invalidSelection {
+    print("沒有這項商品");
+}catch VendingMachineError.outOfStock{
+    print("商品沒有了");
+}catch VendingMachineError.insufficientFunds(let coinsNeeded){
+    print("錢不夠，差\(coinsNeeded)");
+}catch{
+    print("無法預期的事");
+}
+ */
+
+if (try? buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)) == nil {
+    print("出錯了");
+}
+
+try! buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
+
