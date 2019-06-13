@@ -151,12 +151,26 @@
                                     <outlet property="delegate" destination="WPL-Hr-M0e" id="u4C-wb-Ny6"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-5p-RLq">
+                                <rect key="frame" x="230" y="82" width="60" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Yel-RO-gvi"/>
+                                </constraints>
+                                <color key="tintColor" red="0.13732659220000001" green="0.29651982840000002" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Rate"/>
+                                <connections>
+                                    <segue destination="UIM-YM-jVm" kind="presentation" id="2z0-V3-gHZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Vmz-5p-RLq" firstAttribute="top" secondItem="91P-Qz-Lgu" secondAttribute="top" constant="18" id="13Y-Wg-hdT"/>
                             <constraint firstItem="rDP-hv-tc8" firstAttribute="trailing" secondItem="91P-Qz-Lgu" secondAttribute="trailing" id="kOr-N9-wH5"/>
                             <constraint firstItem="rDP-hv-tc8" firstAttribute="top" secondItem="4nR-6q-eRL" secondAttribute="top" id="orl-qS-e1c"/>
                             <constraint firstItem="rDP-hv-tc8" firstAttribute="bottom" secondItem="91P-Qz-Lgu" secondAttribute="bottom" id="qxk-gM-M6V"/>
+                            <constraint firstItem="91P-Qz-Lgu" firstAttribute="trailing" secondItem="Vmz-5p-RLq" secondAttribute="trailing" constant="30" id="sfQ-jD-1rZ"/>
                             <constraint firstItem="rDP-hv-tc8" firstAttribute="leading" secondItem="91P-Qz-Lgu" secondAttribute="leading" id="w6W-Tf-gfS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="91P-Qz-Lgu"/>
@@ -169,6 +183,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNt-rx-wNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1306.875" y="53.75"/>
+        </scene>
+        <!--Rate View Controller-->
+        <scene sceneID="tGE-d8-44r">
+            <objects>
+                <viewController id="UIM-YM-jVm" customClass="RateViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lk6-WL-lKN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Florence" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-FR-ajj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WGc-FR-ajj" firstAttribute="leading" secondItem="Bqm-hB-R57" secondAttribute="leading" id="BU8-nr-fzf"/>
+                            <constraint firstItem="WGc-FR-ajj" firstAttribute="top" secondItem="lk6-WL-lKN" secondAttribute="top" id="QTi-cP-F1s"/>
+                            <constraint firstAttribute="bottom" secondItem="WGc-FR-ajj" secondAttribute="bottom" id="WUh-rx-q3m"/>
+                            <constraint firstItem="WGc-FR-ajj" firstAttribute="trailing" secondItem="Bqm-hB-R57" secondAttribute="trailing" id="aIi-aV-8aG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bqm-hB-R57"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="WGc-FR-ajj" id="cLn-jL-5mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjE-6P-thE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2141.25" y="53.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vMD-8u-73Z">
@@ -189,4 +232,7 @@
             <point key="canvasLocation" x="-165" y="53.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Florence" width="640" height="360"/>
+    </resources>
 </document>

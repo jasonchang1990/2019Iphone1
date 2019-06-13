@@ -13,6 +13,7 @@
 		7024FA9321F42948004FA9ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7024FA9221F42948004FA9ED /* Assets.xcassets */; };
 		7024FA9621F42948004FA9ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7024FA9421F42948004FA9ED /* LaunchScreen.storyboard */; };
 		70D0666A21FD849800AFC999 /* citylist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70D0666921FD849800AFC999 /* citylist.plist */; };
+		E148243822B278820006051B /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148243722B278820006051B /* RateViewController.swift */; };
 		E16E0117220D98CF0044CCBB /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E0116220D98CF0044CCBB /* DetailViewCell.swift */; };
 		E19D6A9122086F1F00284B3F /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19D6A9022086F1F00284B3F /* CityCell.swift */; };
 		E1ACC2E5220B0D6F00DD2562 /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ACC2E4220B0D6F00DD2562 /* CityDetailViewController.swift */; };
@@ -28,6 +29,7 @@
 		7024FA9521F42948004FA9ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7024FA9721F42948004FA9ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D0666921FD849800AFC999 /* citylist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citylist.plist; sourceTree = "<group>"; };
+		E148243722B278820006051B /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		E16E0116220D98CF0044CCBB /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		E19D6A9022086F1F00284B3F /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		E1ACC2E4220B0D6F00DD2562 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		7024FA8A21F42945004FA9ED /* simpleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				E148243722B278820006051B /* RateViewController.swift */,
 				70D0666921FD849800AFC999 /* citylist.plist */,
 				7024FA8B21F42945004FA9ED /* AppDelegate.swift */,
 				7024FA8D21F42945004FA9ED /* ViewController.swift */,
@@ -158,6 +161,7 @@
 				E16E0117220D98CF0044CCBB /* DetailViewCell.swift in Sources */,
 				7024FA8C21F42945004FA9ED /* AppDelegate.swift in Sources */,
 				E19D6A9122086F1F00284B3F /* CityCell.swift in Sources */,
+				E148243822B278820006051B /* RateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
