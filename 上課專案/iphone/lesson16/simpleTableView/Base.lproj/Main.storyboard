@@ -117,13 +117,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uA-58-GhZ">
-                                                    <rect key="frame" x="27" y="29.5" width="64.5" height="20.5"/>
+                                                    <rect key="frame" x="27" y="29.5" width="88" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FieldValue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yow-vs-3Zb">
-                                                    <rect key="frame" x="99.5" y="29.5" width="193.5" height="21"/>
+                                                    <rect key="frame" x="123" y="29.5" width="264" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -195,18 +195,41 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Florence" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-FR-ajj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eP-AO-cx9">
+                                <rect key="frame" x="40" y="48" width="240" height="384"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Auckland" translatesAutoresizingMaskIntoConstraints="NO" id="ekM-vm-VRb">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="136"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ekM-vm-VRb" secondAttribute="height" multiplier="30:17" id="UnD-ms-CBP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ekM-vm-VRb" secondAttribute="trailing" id="J7m-oV-qjv"/>
+                                    <constraint firstItem="ekM-vm-VRb" firstAttribute="leading" secondItem="6eP-AO-cx9" secondAttribute="leading" id="MPD-HW-5x2"/>
+                                    <constraint firstAttribute="width" secondItem="6eP-AO-cx9" secondAttribute="height" multiplier="5:8" id="awh-em-mxK"/>
+                                    <constraint firstItem="ekM-vm-VRb" firstAttribute="top" secondItem="6eP-AO-cx9" secondAttribute="top" id="oAV-wp-Gd2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WGc-FR-ajj" firstAttribute="leading" secondItem="Bqm-hB-R57" secondAttribute="leading" id="BU8-nr-fzf"/>
+                            <constraint firstItem="6eP-AO-cx9" firstAttribute="leading" secondItem="Bqm-hB-R57" secondAttribute="leading" constant="40" id="FUu-N9-qvO"/>
+                            <constraint firstItem="Bqm-hB-R57" firstAttribute="trailing" secondItem="6eP-AO-cx9" secondAttribute="trailing" constant="40" id="N8w-Fz-t2l"/>
                             <constraint firstItem="WGc-FR-ajj" firstAttribute="top" secondItem="lk6-WL-lKN" secondAttribute="top" id="QTi-cP-F1s"/>
                             <constraint firstAttribute="bottom" secondItem="WGc-FR-ajj" secondAttribute="bottom" id="WUh-rx-q3m"/>
                             <constraint firstItem="WGc-FR-ajj" firstAttribute="trailing" secondItem="Bqm-hB-R57" secondAttribute="trailing" id="aIi-aV-8aG"/>
+                            <constraint firstItem="6eP-AO-cx9" firstAttribute="centerY" secondItem="lk6-WL-lKN" secondAttribute="centerY" id="uS7-bi-DNC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bqm-hB-R57"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="WGc-FR-ajj" id="cLn-jL-5mz"/>
+                        <outlet property="cityImageView" destination="ekM-vm-VRb" id="JYQ-NI-beY"/>
+                        <outlet property="container" destination="6eP-AO-cx9" id="jJK-Dw-QTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjE-6P-thE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,6 +256,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Auckland" width="640" height="360"/>
         <image name="Florence" width="640" height="360"/>
     </resources>
 </document>
