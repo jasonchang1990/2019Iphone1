@@ -66,3 +66,14 @@ things.append({
     (name:String) -> String in
         "Hello, \(name)"
 })
+
+
+for thing in things{
+    switch thing{
+    case 0 as Int:
+        print("0");
+    case 0 as Double:
+        print("0.0");
+     default:break;
+    }
+}
