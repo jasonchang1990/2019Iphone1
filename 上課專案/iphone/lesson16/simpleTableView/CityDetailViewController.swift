@@ -39,9 +39,24 @@ class CityDetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true);
     }
     
+    @IBAction func rateExit(sender:UIStoryboardSegue){
+        switch sender.identifier! {
+        case "n1":
+            print("n1");
+        case "n2":
+            print("n2");
+        case "n3":
+            print("n3");
+        case "n4":
+            print("n4");
+        default:
+            break;
+        }
+    }
 
     
 }
+
 extension CityDetailViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return 5;

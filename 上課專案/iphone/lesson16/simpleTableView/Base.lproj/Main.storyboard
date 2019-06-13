@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNt-rx-wNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306.875" y="53.75"/>
+            <point key="canvasLocation" x="1301" y="54"/>
         </scene>
         <!--Rate View Controller-->
         <scene sceneID="tGE-d8-44r">
@@ -204,13 +204,67 @@
                                             <constraint firstAttribute="width" secondItem="ekM-vm-VRb" secondAttribute="height" multiplier="30:17" id="UnD-ms-CBP"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您曾經來過這裏嗎?給它打個分數吧" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ6-6L-vVs">
+                                        <rect key="frame" x="12" y="141" width="216" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dth-Hm-sJ6">
+                                        <rect key="frame" x="30" y="202" width="180" height="157"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCi-fu-kUJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="32"/>
+                                                <color key="backgroundColor" red="0.13732659220000001" green="0.29651982840000002" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="科技化城市"/>
+                                                <connections>
+                                                    <segue destination="isO-E8-p1j" kind="unwind" identifier="n1" unwindAction="rateExitWithSender:" id="nKb-W9-jGN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPU-3H-c15">
+                                                <rect key="frame" x="0.0" y="42" width="180" height="31.5"/>
+                                                <color key="backgroundColor" red="0.13732659220000001" green="0.29651982840000002" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="風景不錯"/>
+                                                <connections>
+                                                    <segue destination="isO-E8-p1j" kind="unwind" identifier="n2" unwindAction="rateExitWithSender:" id="gaP-ZK-jQx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-c2-4Ao">
+                                                <rect key="frame" x="0.0" y="83.5" width="180" height="32"/>
+                                                <color key="backgroundColor" red="0.13732659220000001" green="0.29651982840000002" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="現代化城市"/>
+                                                <connections>
+                                                    <segue destination="isO-E8-p1j" kind="unwind" identifier="n3" unwindAction="rateExitWithSender:" id="7Kw-9v-H6l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-Ms-3pW">
+                                                <rect key="frame" x="0.0" y="125.5" width="180" height="31.5"/>
+                                                <color key="backgroundColor" red="0.13732659220000001" green="0.29651982840000002" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="環保的城市"/>
+                                                <connections>
+                                                    <segue destination="isO-E8-p1j" kind="unwind" identifier="n4" unwindAction="rateExitWithSender:" id="u9G-Hg-Ju1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ekM-vm-VRb" secondAttribute="trailing" id="J7m-oV-qjv"/>
                                     <constraint firstItem="ekM-vm-VRb" firstAttribute="leading" secondItem="6eP-AO-cx9" secondAttribute="leading" id="MPD-HW-5x2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dth-Hm-sJ6" secondAttribute="bottom" constant="25" id="W5o-UY-weO"/>
+                                    <constraint firstItem="uZ6-6L-vVs" firstAttribute="top" secondItem="ekM-vm-VRb" secondAttribute="bottom" constant="5" id="W9K-Ix-ytm"/>
+                                    <constraint firstItem="Dth-Hm-sJ6" firstAttribute="leading" secondItem="6eP-AO-cx9" secondAttribute="leading" constant="30" id="YUh-yn-E8n"/>
                                     <constraint firstAttribute="width" secondItem="6eP-AO-cx9" secondAttribute="height" multiplier="5:8" id="awh-em-mxK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dth-Hm-sJ6" secondAttribute="trailing" constant="30" id="mnD-Z6-kx7"/>
                                     <constraint firstItem="ekM-vm-VRb" firstAttribute="top" secondItem="6eP-AO-cx9" secondAttribute="top" id="oAV-wp-Gd2"/>
+                                    <constraint firstItem="uZ6-6L-vVs" firstAttribute="leading" secondItem="6eP-AO-cx9" secondAttribute="leading" constant="12" id="pNr-Pf-4Fa"/>
+                                    <constraint firstAttribute="trailing" secondItem="uZ6-6L-vVs" secondAttribute="trailing" constant="12" id="pos-bf-ruJ"/>
+                                    <constraint firstItem="Dth-Hm-sJ6" firstAttribute="top" secondItem="uZ6-6L-vVs" secondAttribute="bottom" constant="20" id="vDA-N1-00p"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -233,6 +287,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjE-6P-thE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="isO-E8-p1j" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2141.25" y="53.75"/>
         </scene>
@@ -242,7 +297,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jeT-nz-5EP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N2R-GC-16g">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
