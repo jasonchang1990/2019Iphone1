@@ -251,9 +251,22 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-VH-sMP">
+                                        <rect key="frame" x="180" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="WK6-J9-2WX"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.13732659220000001" green="0.29651982840000002" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="取消"/>
+                                        <connections>
+                                            <action selector="userCancel:" destination="UIM-YM-jVm" eventType="touchUpInside" id="x6E-fB-1M4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="sfc-VH-sMP" firstAttribute="top" secondItem="6eP-AO-cx9" secondAttribute="top" id="75s-ZQ-Rhd"/>
                                     <constraint firstAttribute="trailing" secondItem="ekM-vm-VRb" secondAttribute="trailing" id="J7m-oV-qjv"/>
                                     <constraint firstItem="ekM-vm-VRb" firstAttribute="leading" secondItem="6eP-AO-cx9" secondAttribute="leading" id="MPD-HW-5x2"/>
                                     <constraint firstAttribute="bottom" secondItem="Dth-Hm-sJ6" secondAttribute="bottom" constant="25" id="W5o-UY-weO"/>
@@ -264,6 +277,7 @@
                                     <constraint firstItem="ekM-vm-VRb" firstAttribute="top" secondItem="6eP-AO-cx9" secondAttribute="top" id="oAV-wp-Gd2"/>
                                     <constraint firstItem="uZ6-6L-vVs" firstAttribute="leading" secondItem="6eP-AO-cx9" secondAttribute="leading" constant="12" id="pNr-Pf-4Fa"/>
                                     <constraint firstAttribute="trailing" secondItem="uZ6-6L-vVs" secondAttribute="trailing" constant="12" id="pos-bf-ruJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="sfc-VH-sMP" secondAttribute="trailing" id="rhj-ng-HrJ"/>
                                     <constraint firstItem="Dth-Hm-sJ6" firstAttribute="top" secondItem="uZ6-6L-vVs" secondAttribute="bottom" constant="20" id="vDA-N1-00p"/>
                                 </constraints>
                             </view>

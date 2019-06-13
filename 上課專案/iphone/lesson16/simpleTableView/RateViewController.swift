@@ -20,6 +20,10 @@ class RateViewController: UIViewController {
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
     }
+    
+    @IBAction func userCancel(_ sender:UIButton){
+        dismiss(animated: true, completion: nil)
+    }
 
     
 
