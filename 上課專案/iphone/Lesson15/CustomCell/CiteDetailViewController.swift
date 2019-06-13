@@ -38,7 +38,8 @@ extension CiteDetailViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! DetailViewCell;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! DetailViewCell ;
+        
         switch indexPath.row {
         case 0:
             cell.fieldLabel.text = "五大州"
