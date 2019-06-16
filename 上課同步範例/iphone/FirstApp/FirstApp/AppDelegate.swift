@@ -23,9 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window = UIWindow();
         }
  */
+        
         window = window ?? UIWindow();
-        let myViewController = UIViewController();
-        myViewController.view.backgroundColor = UIColor.purple;
+        let myViewController = ViewController();
+        //0616
+        //myViewController.view.backgroundColor = UIColor.purple;
         window!.rootViewController = myViewController;
         //window!.backgroundColor = UIColor.brown;
         window!.makeKeyAndVisible();
