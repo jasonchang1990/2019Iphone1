@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //0616
         view.backgroundColor = UIColor.purple
+        let myView = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 300));
+        myView.backgroundColor = UIColor.white;
+        myView.center = view.center;
+        view.addSubview(myView);
+        
     }
 
 
