@@ -19,10 +19,18 @@ class RateViewController: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
+        container.transform = CGAffineTransform(scaleX: 0, y: 0)
     }
     
     @IBAction func userCancel(_ sender:UIButton){
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.3){
+            self.container.transform = CGAffineTransform.identity;
+        }
     }
 
     
