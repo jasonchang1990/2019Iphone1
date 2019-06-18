@@ -10,6 +10,7 @@ import Foundation
 class DataSource{
     
     static var defaults:DataSource = {
-        DataSource();
+        //doSomeThing
+        return DataSource();
     }()
 }
