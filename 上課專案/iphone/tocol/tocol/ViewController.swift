@@ -24,7 +24,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         counter = 10
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goStepper"{
+            let navigationController = segue.destination as! UINavigationController;
+            if let stepViewController = navigationController.topViewController as? StepViewController{
+               stepViewController.stepperDelegate = self;
+            }
+           
+        }
+    }
 
 
+}
+
+extension ViewController:StepViewControllerDelegate{
+    func stepperChange(stepperCounter count:Int){
+        self.counter = count;
+    }
 }
 

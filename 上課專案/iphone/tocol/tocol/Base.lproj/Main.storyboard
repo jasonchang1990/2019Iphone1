@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="aoO-G0-qAu">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="wtv-BP-dC2">
                             <connections>
-                                <segue destination="g4x-n4-XRy" kind="presentation" id="7To-vl-mpX"/>
+                                <segue destination="g4x-n4-XRy" kind="presentation" identifier="goStepper" id="7To-vl-mpX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
