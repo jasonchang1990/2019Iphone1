@@ -44,3 +44,69 @@ class Starship:FullyNamed{
 var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
 ncc1701.fullName
 
+
+//Method Requirements
+protocol RandomNumberGenerator{
+    func random() -> Double;
+}
+
+class LinearCongruentialGeneratior:RandomNumberGenerator{
+    var lastRandom = 42.0;
+    let m = 139968.0;
+    let a = 3877.0;
+    let c = 29573.0;
+    func random() -> Double {
+        return lastRandom / m;
+    }
+}
+
+protocol Togglable{
+    mutating func toggle();
+}
+
+enum OnOffSwitch:Togglable{
+    case off, on
+    mutating func toggle(){
+        switch self{
+            case .off:
+                self = .on;
+            case .on:
+                self = .off;
+        }
+    }
+}
+
+var lightSwitch = OnOffSwitch.off;
+lightSwitch.toggle();
+lightSwitch
+
+
+//initializer requirements
+protocol SomeProtocol1{
+    init(someParameter:Int);
+}
+
+class SomeClass:SomeProtocol1{
+    required init(someParameter: Int) {
+        
+    }
+}
+
+protocol SomeProtocol2{
+    init();
+}
+
+
+
+class SomeSuperClass{
+    init(){
+    }
+}
+
+class SomeSubClass:SomeSuperClass, SomeProtocol2{
+    required override init() {
+        //
+    }
+}
+
+//Protocol as Type
