@@ -23,5 +23,12 @@ class ViewController: UIViewController {
        leftConstraints.constant = (leftConstraints.constant == 40) ? 80 : 40
        rightConstraints.constant = (rightConstraints.constant == 40) ? 80 : 40
     }
+    
+    @IBAction func nextClick(_ sender:UIButton){
+        let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil);
+        present(detailViewController, animated: true) {
+            print("DetailViewController已經出現");
+        }
+    }
 }
 

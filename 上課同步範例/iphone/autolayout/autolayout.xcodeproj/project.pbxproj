@@ -12,6 +12,8 @@
 		E183CAAF22BF1EE4000149CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E183CAAD22BF1EE4000149CC /* Main.storyboard */; };
 		E183CAB122BF1EE6000149CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E183CAB022BF1EE6000149CC /* Assets.xcassets */; };
 		E183CAB422BF1EE6000149CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E183CAB222BF1EE6000149CC /* LaunchScreen.storyboard */; };
+		E183CABD22BF3415000149CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183CABB22BF3415000149CC /* DetailViewController.swift */; };
+		E183CABE22BF3415000149CC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E183CABC22BF3415000149CC /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E183CAB022BF1EE6000149CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E183CAB322BF1EE6000149CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E183CAB522BF1EE6000149CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E183CABB22BF3415000149CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E183CABC22BF3415000149CC /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 		E183CA9D22BF1EE4000149CC = {
 			isa = PBXGroup;
 			children = (
+				E183CABB22BF3415000149CC /* DetailViewController.swift */,
+				E183CABC22BF3415000149CC /* DetailViewController.xib */,
 				E183CAA822BF1EE4000149CC /* autolayout */,
 				E183CAA722BF1EE4000149CC /* Products */,
 			);
@@ -125,6 +131,7 @@
 				E183CAB422BF1EE6000149CC /* LaunchScreen.storyboard in Resources */,
 				E183CAB122BF1EE6000149CC /* Assets.xcassets in Resources */,
 				E183CAAF22BF1EE4000149CC /* Main.storyboard in Resources */,
+				E183CABE22BF3415000149CC /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E183CABD22BF3415000149CC /* DetailViewController.swift in Sources */,
 				E183CAAC22BF1EE4000149CC /* ViewController.swift in Sources */,
 				E183CAAA22BF1EE4000149CC /* AppDelegate.swift in Sources */,
 			);
