@@ -52,3 +52,35 @@ while currentValue != 0 {
 }
 
 //Closures
+
+let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+
+func backward(_ s1:String,_ s2:String)  ->  Bool{
+   
+    return s1 < s2;
+}
+
+var reverseNames = names.sorted(by: backward)
+
+reverseNames = names.sorted(by: {
+    (s1:String, s2:String) -> Bool in
+    return s1 > s2;
+})
+
+print(reverseNames)
+
+reverseNames = names.sorted(by: {
+    (s1:String, s2:String) -> Bool in
+        s1 > s2;
+})
+print(reverseNames)
+
+reverseNames = names.sorted(by: {s1, s2 in  s1 > s2})
+print(reverseNames)
+
+reverseNames = names.sorted(by: { $0 > $1})
+print(reverseNames)
+
+reverseNames = names.sorted{$0 > $1}
+print(reverseNames)
