@@ -74,3 +74,15 @@ func arithmeticMean(_ numbers:Double...) -> Double{
 }
 
 print(arithmeticMean(3.5, 67.4, 98.2, 35.7))
+
+func swapTwoInts(a:inout Int, b:inout Int){
+    let temporaryA = a;
+    a = b;
+    b = temporaryA;
+}
+
+var someInt = 3;
+var anotherInt = 107;
+swapTwoInts(a: &someInt, b: &anotherInt)
+print(someInt);
+print(anotherInt)
