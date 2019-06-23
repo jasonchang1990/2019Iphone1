@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var leftConstraints:NSLayoutConstraint!;
+    @IBOutlet var rightConstraints:NSLayoutConstraint!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func userClick(_ sender:UIButton){
+        print("左邊限制:\(leftConstraints.constant)");
+        print("右邊限制:\(rightConstraints.constant)");
+       leftConstraints.constant = (leftConstraints.constant == 40) ? 80 : 40
+       rightConstraints.constant = (rightConstraints.constant == 40) ? 80 : 40
+    }
 }
 
