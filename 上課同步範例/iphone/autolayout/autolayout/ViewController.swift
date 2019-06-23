@@ -26,8 +26,9 @@ class ViewController: UIViewController {
     
     @IBAction func nextClick(_ sender:UIButton){
         let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil);
-        present(detailViewController, animated: true) {
-            print("DetailViewController已經出現");
+        present(detailViewController, animated: true){
+            print("DetailViewController完成動畫")
+            
         }
     }
 }
