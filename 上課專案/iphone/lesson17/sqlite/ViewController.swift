@@ -11,16 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     override func awakeFromNib() {
         super.awakeFromNib();
-        let dataSource1 = DataSource.defaults
-        let dataSource2 = DataSource.defaults
-        let dataSource3 = DataSource.defaults
-        if dataSource1 === dataSource2{
-            print("yes");
-        }
-        
-        if dataSource2 === dataSource3{
-            print("yes");
-        }
+       let targetPaths = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory,
+            .userDomainMask,
+            true);
+        let targetpath = targetPaths.first!;
+        print(targetpath)
     }
 
     override func viewDidLoad() {
