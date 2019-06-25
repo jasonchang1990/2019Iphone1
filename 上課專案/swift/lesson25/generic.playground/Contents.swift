@@ -32,3 +32,40 @@ swapTwoValues(&someInt, &anotherInt)
 var someString = "hello"
 var anotherString = "world"
 swapTwoValues(&someString, &anotherString)
+
+//Generic Typesp
+struct IntStack{
+    var items = [Int]();
+    mutating func push(_ item:Int){
+        items.append(item)
+    }
+    
+    mutating func pop() -> Int{
+        return items.removeLast();
+    }
+}
+
+struct Stack<Element:Hashable>{
+    var items = [Element]();
+    mutating func push(_ item:Element){
+        items.append(item)
+    }
+    
+    mutating func pop() -> Element{
+        return items.removeLast();
+    }
+}
+//Array<String>
+//Dictionary<Int,String>
+
+var stackOfStrings = Stack<String>();
+stackOfStrings.push("uno")
+stackOfStrings.push("dos")
+stackOfStrings.push("tres")
+stackOfStrings.push("cuatro")
+
+var stackOfInts = Stack<Int>();
+stackOfInts.push(5)
+stackOfInts.push(6)
+stackOfInts.push(7)
+stackOfInts.push(8)
