@@ -11,22 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
-       let dbSourcePath = Bundle.main.path(forResource: "city", ofType: "db")!
-       let targetPaths = NSSearchPathForDirectoriesInDomains(
-            .documentDirectory,
-            .userDomainMask,
-            true);
-        let targetpath = targetPaths.first!
-        //print(targetpath)
-        let dbTargetPath = "\(targetpath)/citys.db"
-        if !FileManager.default.fileExists(atPath: dbTargetPath){
-            if (try? FileManager.default.copyItem(atPath: dbSourcePath, toPath: dbTargetPath)) != nil {
-               print("copy成功")
-            }else{
-               print("copy失敗")
-            }
-            print("dbTargetPath路徑\(targetpath)");
-        }
+        let default1 = DataSource.defaults;
+        
+       
     }
 
     override func viewDidLoad() {

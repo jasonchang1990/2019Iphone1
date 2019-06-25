@@ -8,9 +8,26 @@
 
 import Foundation
 class DataSource{
-    
+    //singleton class
     static var defaults:DataSource = {
-        //doSomeThing
+        //這裏只會被執行一次
+        print("只執行一次")
+        let dbSourcePath = Bundle.main.path(forResource: "city", ofType: "db")!
+        let targetPaths = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory,
+            .userDomainMask,
+            true);
+        let targetpath = targetPaths.first!
+        //print(targetpath)
+        let dbTargetPath = "\(targetpath)/citys.db"
+        if !FileManager.default.fileExists(atPath: dbTargetPath){
+            if (try? FileManager.default.copyItem(atPath: dbSourcePath, toPath: dbTargetPath)) != nil {
+                print("copy成功")
+            }else{
+                print("copy失敗")
+            }
+            print("dbTargetPath路徑\(targetpath)");
+        }
         return DataSource();
     }()
 }
