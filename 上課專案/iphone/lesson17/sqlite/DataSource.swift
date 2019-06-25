@@ -48,7 +48,22 @@ class DataSource{
     
         for cityData in citys!{
             let sqlInsertString = "INSERT INTO city (cityName, continent, country, image, description, lat, lon, url) VALUES (?, ?, ?, ?, ?, ?,?,?)"
-            print(cityData)
+            var statements:OpaquePointer!;
+            if sqlite3_prepare_v2(
+                db,
+                sqlInsertString,
+                -1,
+                &statements,
+                nil) == SQLITE_OK{
+                print("statements ok");
+            }else{
+                
+                sqlite3_finalize(statements)
+                sqlite3_close(db);
+                fatalError("statements 失敗")
+                return
+            }
+            //print(cityData)
         }
     }
 }
