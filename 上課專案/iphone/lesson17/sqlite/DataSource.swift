@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import SQLite3
+
 class DataSource{
     //singleton class
+    static var db:OpaquePointer!;
     static var defaults:DataSource = {
         //這裏只會被執行一次
         print("只執行一次")
@@ -34,6 +37,9 @@ class DataSource{
     
     static func fillSQLData(plistPath:String, dbPath:String){
         let citys = NSArray(contentsOfFile: plistPath) as? [[String:Any]]
+        if sqlite3_open(dbPath, &db) == SQLITE_OK{
+            print("db open");
+        }
         for cityData in citys!{
             print(cityData)
         }
