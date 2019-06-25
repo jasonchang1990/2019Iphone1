@@ -38,9 +38,16 @@ class DataSource{
     static func fillSQLData(plistPath:String, dbPath:String){
         let citys = NSArray(contentsOfFile: plistPath) as? [[String:Any]]
         if sqlite3_open(dbPath, &db) == SQLITE_OK{
-            print("db open");
+            print("db open")
+        }else{
+            sqlite3_close(db)
+            fatalError("db open error")
+            return;
         }
+        
+    
         for cityData in citys!{
+            let sqlInsertString = "INSERT INTO city (cityName, continent, country, image, description, lat, lon, url) VALUES (?, ?, ?, ?, ?, ?,?,?)"
             print(cityData)
         }
     }
