@@ -12,6 +12,8 @@ import SQLite3
 class DataSource{
     //singleton class
     static var db:OpaquePointer!;
+    //0627
+    static var dbTargetPath:String!;
     static var defaults:DataSource = {
         //這裏只會被執行一次
         print("只執行一次")
@@ -23,7 +25,8 @@ class DataSource{
             true);
         let targetpath = targetPaths.first!
         //print(targetpath)
-        let dbTargetPath = "\(targetpath)/citys.db"
+        //0627
+        dbTargetPath = "\(targetpath)/citys.db"
         print("dbTargetPath路徑\(targetpath)");
         if !FileManager.default.fileExists(atPath: dbTargetPath){
             if (try? FileManager.default.copyItem(atPath: dbSourcePath, toPath: dbTargetPath)) != nil {
@@ -100,8 +103,24 @@ class DataSource{
             }
         }
     }
+    
     var allCitys:[City]!{
-        
+        createDb()
+        let allCitySqlString = "select * FROM city"
+        var statement:OpaquePointer!;
+        if sqlite3_prepare_v2(DataSource.db, allCitySqlString, -1, &statement, nil) == SQLITE_OK{
+            print("prepare_v2 ok");
+        }else{
+            print("prepare_v2 error");
+        }
        return nil
+    }
+    
+    func createDb(){
+        if sqlite3_open(DataSource.dbTargetPath, &DataSource.db) == SQLITE_OK{
+            print("db open");
+        }else{
+            print("db close");
+        }
     }
 }
