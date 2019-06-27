@@ -15,6 +15,9 @@ class ViewController: UITableViewController {
         super.awakeFromNib()
         let dataSource = DataSource.defaults;
         allCitys = dataSource.allCitys;
+        for city in allCitys{
+            print(city.city);
+        }
        
     }
 

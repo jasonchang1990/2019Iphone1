@@ -25,7 +25,7 @@ class DataSource{
             true);
         let targetpath = targetPaths.first!
         //print(targetpath)
-        //0627
+        
         dbTargetPath = "\(targetpath)/citys.db"
         print("dbTargetPath路徑\(targetpath)");
         if !FileManager.default.fileExists(atPath: dbTargetPath){
@@ -114,7 +114,23 @@ class DataSource{
             print("prepare_v2 error");
             return nil;
         }
-       return nil
+        //0627
+        var citys = [City]();
+        while sqlite3_step(statement) == SQLITE_ROW {
+            
+            let cityName = String(cString: sqlite3_column_text(statement, 0))
+            let continent = String(cString: sqlite3_column_text(statement, 1))
+            let country = String(cString: sqlite3_column_text(statement, 2))
+            let image = String(cString: sqlite3_column_text(statement, 3))
+            let description = String(cString: sqlite3_column_text(statement, 4))
+            let latitude = sqlite3_column_double(statement, 5)
+            let longitude = sqlite3_column_double(statement, 6)
+            let url = String(cString: sqlite3_column_text(statement, 7))
+            let city = City(city: cityName, continent: continent, country: country, image: image, local: description, lat: latitude, lon: longitude, url: url);
+            citys.append(city);
+        }
+        
+        return citys;
     }
     
     func createDb(){
