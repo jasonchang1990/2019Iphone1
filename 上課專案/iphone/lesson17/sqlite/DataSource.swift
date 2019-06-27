@@ -24,13 +24,14 @@ class DataSource{
         let targetpath = targetPaths.first!
         //print(targetpath)
         let dbTargetPath = "\(targetpath)/citys.db"
+        print("dbTargetPath路徑\(targetpath)");
         if !FileManager.default.fileExists(atPath: dbTargetPath){
             if (try? FileManager.default.copyItem(atPath: dbSourcePath, toPath: dbTargetPath)) != nil {
                 fillSQLData(plistPath: cityListPath, dbPath: dbTargetPath)
             }else{
                 print("copy失敗")
             }
-            print("dbTargetPath路徑\(targetpath)");
+            
         }
         return DataSource();
     }()
@@ -63,7 +64,39 @@ class DataSource{
                 fatalError("statements 失敗")
                 return
             }
-            //print(cityData)
+            
+            for (key, value) in cityData{
+                switch key {
+                    case "City":
+                        sqlite3_bind_text(statements, 1, (value as! NSString).utf8String, -1, nil);
+                    case "Continent":
+                        sqlite3_bind_text(statements, 2, (value as! NSString).utf8String, -1, nil);
+                    
+                    case "Country":
+                        sqlite3_bind_text(statements, 3, (value as! NSString).utf8String, -1, nil);
+                    
+                    case "Image":
+                        sqlite3_bind_text(statements, 4, (value as! NSString).utf8String, -1, nil);
+                    
+                    case "Local":
+                        sqlite3_bind_text(statements, 5, (value as! NSString).utf8String, -1, nil);
+                    
+                    case "lat":
+                        sqlite3_bind_double(statements, 6, value as! Double);
+                    
+                    case "long":
+                        sqlite3_bind_double(statements, 7, value as! Double);
+                    
+                    case "url":
+                        sqlite3_bind_text(statements, 8, (value as! NSString).utf8String, -1, nil);
+                    default:break
+                }               
+                
+            }
+            
+            if sqlite3_step(statements) == SQLITE_DONE {
+                print("insert 成功");
+            }
         }
     }
 }
