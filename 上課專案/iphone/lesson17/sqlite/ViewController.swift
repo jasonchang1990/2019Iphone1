@@ -15,9 +15,7 @@ class ViewController: UITableViewController {
         super.awakeFromNib()
         let dataSource = DataSource.defaults;
         allCitys = dataSource.allCitys;
-        for city in allCitys{
-            print(city.city);
-        }
+              
        
     }
 
@@ -27,5 +25,19 @@ class ViewController: UITableViewController {
     }
 
 
+}
+
+extension ViewController{
+    //UITableViewDataSource
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return allCitys.count;
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let city = allCitys[indexPath.row];
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath);
+        cell.textLabel?.text = city.city;
+        return cell;
+    }
 }
 
