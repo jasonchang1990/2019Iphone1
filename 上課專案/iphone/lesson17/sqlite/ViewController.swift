@@ -37,6 +37,9 @@ extension ViewController{
         let city = allCitys[indexPath.row];
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! CityCell;
         cell.cityImageView.image = UIImage(named: city.image)
+        cell.cityLabel.text = city.city;
+        cell.countryLabel.text = city.country;
+        cell.continentLabel.text = city.continent;
         return cell;
     }
 }

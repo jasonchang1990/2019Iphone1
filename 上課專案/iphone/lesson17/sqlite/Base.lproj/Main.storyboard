@@ -32,14 +32,43 @@
                                                 <constraint firstAttribute="width" constant="92" id="yhl-HQ-5f6"/>
                                             </constraints>
                                         </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZnA-hx-4J4">
+                                            <rect key="frame" x="139" y="10" width="171" height="77.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秋葉原" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogi-X8-4b9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Japan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-GR-vEe">
+                                                    <rect key="frame" x="0.0" y="31.5" width="46.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdy-1J-4eG">
+                                                    <rect key="frame" x="0.0" y="57" width="32.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="ZnA-hx-4J4" firstAttribute="top" secondItem="Gih-rc-cVv" secondAttribute="top" constant="10" id="IfS-hx-d4D"/>
                                         <constraint firstItem="9zZ-No-7GA" firstAttribute="top" secondItem="Gih-rc-cVv" secondAttribute="top" constant="10" id="L7B-1M-KD0"/>
+                                        <constraint firstItem="ZnA-hx-4J4" firstAttribute="leading" secondItem="9zZ-No-7GA" secondAttribute="trailing" constant="27" id="TI4-Vp-4k6"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZnA-hx-4J4" secondAttribute="trailing" constant="10" id="dnc-Lh-lJC"/>
                                         <constraint firstItem="9zZ-No-7GA" firstAttribute="leading" secondItem="Gih-rc-cVv" secondAttribute="leading" constant="20" id="oPM-XY-lAc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityImageView" destination="9zZ-No-7GA" id="o1w-l8-YJ7"/>
+                                    <outlet property="cityLabel" destination="ogi-X8-4b9" id="ap8-Rh-r7l"/>
+                                    <outlet property="continentLabel" destination="Vdy-1J-4eG" id="7nR-n8-RXJ"/>
+                                    <outlet property="countryLabel" destination="Hu0-GR-vEe" id="Msg-8a-qLG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
