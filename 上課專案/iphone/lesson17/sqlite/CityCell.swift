@@ -9,7 +9,8 @@
 import UIKit
 
 class CityCell: UITableViewCell {
-
+    @IBOutlet var cityImageView:UIImageView!;
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

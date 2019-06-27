@@ -35,8 +35,8 @@ extension ViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let city = allCitys[indexPath.row];
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath);
-        cell.textLabel?.text = city.city;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as! CityCell;
+        cell.cityImageView.image = UIImage(named: city.image)
         return cell;
     }
 }
