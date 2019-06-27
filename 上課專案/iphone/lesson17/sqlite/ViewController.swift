@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UITableViewController {
     var allCitys:[City]!;
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        let default1 = DataSource.defaults;
-        
+        let dataSource = DataSource.defaults;
+        allCitys = dataSource.allCitys;
        
     }
 

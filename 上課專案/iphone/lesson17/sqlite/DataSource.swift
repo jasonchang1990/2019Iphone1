@@ -100,4 +100,8 @@ class DataSource{
             }
         }
     }
+    var allCitys:[City]!{
+        
+       return nil
+    }
 }
