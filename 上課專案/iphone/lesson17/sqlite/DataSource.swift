@@ -112,6 +112,7 @@ class DataSource{
             print("prepare_v2 ok");
         }else{
             print("prepare_v2 error");
+            return nil;
         }
        return nil
     }
@@ -120,7 +121,8 @@ class DataSource{
         if sqlite3_open(DataSource.dbTargetPath, &DataSource.db) == SQLITE_OK{
             print("db open");
         }else{
-            print("db close");
+            print("db open failure");
+            return;
         }
     }
 }
