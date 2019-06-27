@@ -42,7 +42,7 @@ class DataSource{
             print("db open")
         }else{
             sqlite3_close(db)
-            fatalError("db open error")
+            //fatalError("db open error")
             return;
         }
         
@@ -61,7 +61,7 @@ class DataSource{
                 
                 sqlite3_finalize(statements)
                 sqlite3_close(db);
-                fatalError("statements 失敗")
+                //fatalError("statements 失敗")
                 return
             }
             
@@ -96,6 +96,7 @@ class DataSource{
             
             if sqlite3_step(statements) == SQLITE_DONE {
                 print("insert 成功");
+                sqlite3_finalize(statements)
             }
         }
     }

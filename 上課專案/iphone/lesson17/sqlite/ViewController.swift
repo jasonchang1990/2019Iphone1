@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         let default1 = DataSource.defaults;
