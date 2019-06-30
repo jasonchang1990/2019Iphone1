@@ -62,3 +62,7 @@ tenEighty.frameRate = 25.0
 let alsoTenEighty = tenEighty;
 alsoTenEighty.frameRate = 30.0
 tenEighty.frameRate;
+
+if tenEighty === alsoTenEighty{
+    print("它們搖控的是同一個實體");
+}
