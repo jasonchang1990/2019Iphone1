@@ -24,13 +24,16 @@ class ViewController: UIViewController {
         myImageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         myImageView.layer.shadowOpacity = 0.7
         myImageView.layer.shadowRadius = 5
-        
-        if let path = Bundle.main.path(forResource: "buttonNames", ofType: "plist"){
-            if let array = NSArray(contentsOfFile: path){
-                buttonNames = array as! [String]
-            }
-            
+        /*
+        guard let path = Bundle.main.path(forResource: "buttonNames", ofType: "plist"),let array = NSArray(contentsOfFile: path) else{
+            return;
         }
+        
+        buttonNames = array as! [String]
+ */
+        let path = Bundle.main.path(forResource: "buttonNames", ofType: "plist")!;
+        let array = NSArray(contentsOfFile: path)!
+        buttonNames = array as! [String]
         
         if let btn1 = (view.viewWithTag(101) as? UIButton){
            btn1.setTitle(buttonNames[0], for: .normal)
