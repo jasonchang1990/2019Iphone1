@@ -52,7 +52,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func leftBtnClick(_ sender:UIButton){
-        print("leftBtnClick");
+        let path = Bundle.main.path(forResource: "Names", ofType: "plist")!;
+        let dic = NSDictionary(contentsOfFile: path) as! [String:[String]];
+        let names = dic["names"]!
+        for name in names{
+            print(name);
+        }
+        
     }
     
     @IBAction func rightBtnClick(_ sender:UIButton){
