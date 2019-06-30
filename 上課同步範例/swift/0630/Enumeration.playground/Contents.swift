@@ -1,14 +1,14 @@
 import UIKit
 
-enum CompassPoint{
+enum CompassPoint:String{
     case north
     case south
     case east
     case west
 }
 
-enum Planet{
-    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune;
+enum Planet:Int{
+    case mercury=1, venus, earth, mars, jupiter, saturn, uranus, neptune;
 }
 
 var directionToHead = CompassPoint.west;
@@ -62,3 +62,19 @@ case .upc(let numberSystem, let manufacturer, let product, let check):
 case .qrCode(let productCode):
     print("QR Code:\(productCode)");
 }
+
+//raw values
+enum ASCIIControlCharacter:Character{
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+if let possiblePlanet = Planet(rawValue: 7){
+    print(possiblePlanet)
+}
+
+let earthsOrder = Planet.earth.rawValue;
+
+
+let btn = UIButton(type: .custom);
