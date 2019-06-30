@@ -24,40 +24,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-Se-hhY">
+                                <rect key="frame" x="40" y="236" width="240" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-PB-29G">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="39"/>
+                                        <state key="normal" title="Bicycle" backgroundImage="buttonBg"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-c1-9fC">
+                                        <rect key="frame" x="100.5" y="0.0" width="139.5" height="39"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="9" maxY="0.0"/>
+                                        <state key="normal" title="Bicycle_Bicycle" backgroundImage="buttonBg"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xOR-c1-9fC" firstAttribute="width" secondItem="xPD-PB-29G" secondAttribute="width" multiplier="5:3" id="Tw5-O4-jL2"/>
+                                </constraints>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoes" translatesAutoresizingMaskIntoConstraints="NO" id="BBY-Gu-mYA">
                                 <rect key="frame" x="40" y="89.5" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BBY-Gu-mYA" secondAttribute="height" multiplier="15:8" id="fut-uO-MKM"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-82-xRt">
-                                <rect key="frame" x="40" y="237.5" width="240" height="39"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-PB-29G">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="39"/>
-                                        <state key="normal" title="Bicycle" backgroundImage="buttonBg"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-c1-9fC">
-                                        <rect key="frame" x="109" y="0.0" width="131" height="39"/>
-                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="9" maxY="0.0"/>
-                                        <state key="normal" title="Bicycle_Bicycle" backgroundImage="buttonBg"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="xOR-c1-9fC" firstAttribute="width" secondItem="xPD-PB-29G" secondAttribute="width" multiplier="5:3" id="msB-1B-NWC"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="M68-Hh-2le" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1CF-A6-0Pc"/>
                             <constraint firstItem="BBY-Gu-mYA" firstAttribute="top" secondItem="M68-Hh-2le" secondAttribute="bottom" constant="27" id="A5t-db-2Dw"/>
-                            <constraint firstItem="4fQ-82-xRt" firstAttribute="top" secondItem="BBY-Gu-mYA" secondAttribute="bottom" constant="20" id="FE2-rm-qFL"/>
+                            <constraint firstItem="gpI-Se-hhY" firstAttribute="top" secondItem="BBY-Gu-mYA" secondAttribute="bottom" constant="18.5" id="MWV-Ds-yb6"/>
                             <constraint firstItem="M68-Hh-2le" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rhl-YU-swe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M68-Hh-2le" secondAttribute="trailing" constant="20" id="U9T-9v-JGb"/>
-                            <constraint firstItem="4fQ-82-xRt" firstAttribute="leading" secondItem="BBY-Gu-mYA" secondAttribute="leading" id="g5N-eh-66n"/>
+                            <constraint firstItem="gpI-Se-hhY" firstAttribute="leading" secondItem="BBY-Gu-mYA" secondAttribute="leading" id="dow-tZ-a3Z"/>
+                            <constraint firstItem="gpI-Se-hhY" firstAttribute="trailing" secondItem="BBY-Gu-mYA" secondAttribute="trailing" id="inG-ZN-cvW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BBY-Gu-mYA" secondAttribute="trailing" constant="40" id="knP-Lb-Ykk"/>
-                            <constraint firstItem="4fQ-82-xRt" firstAttribute="trailing" secondItem="BBY-Gu-mYA" secondAttribute="trailing" id="q7O-8E-6OP"/>
                             <constraint firstItem="BBY-Gu-mYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="r1e-9S-ny0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
