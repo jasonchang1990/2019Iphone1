@@ -25,3 +25,23 @@ switch directionToHead{
     case .west:
         print("west")
 }
+
+let somePlanet = Planet.earth
+switch somePlanet{
+    case .earth:
+        print("earth");
+    default:
+        print("other planet");
+}
+
+
+//iterating Enumeration Case
+enum Beverage:CaseIterable{
+    case coffee, tea, juice
+}
+
+let numberOfChoices = Beverage.allCases.count
+
+for beverage in Beverage.allCases{
+    print(beverage)
+}
