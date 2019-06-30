@@ -8,9 +8,11 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     @IBOutlet var myTitle:UILabel!;
     @IBOutlet var myImageView:UIImageView!;
+    let buttonNames = ["Python", "Swift", "Kotlin"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +25,7 @@ class ViewController: UIViewController {
         myImageView.layer.shadowOpacity = 0.7
         myImageView.layer.shadowRadius = 5
         
-        /*
-        var imageRect = myImageView.bounds;
-        imageRect.size = CGSize(width: 500, height: 500);
- */
+      
         
     }
     

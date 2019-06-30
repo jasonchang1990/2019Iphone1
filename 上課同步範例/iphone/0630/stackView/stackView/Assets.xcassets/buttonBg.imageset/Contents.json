@@ -2,12 +2,15 @@
   "images" : [
     {
       "resizing" : {
-        "mode" : "3-part-horizontal",
+        "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 1
+          "width" : 1,
+          "height" : 1
         },
         "cap-insets" : {
+          "bottom" : 19,
+          "top" : 19,
           "right" : 19,
           "left" : 19
         }
@@ -18,12 +21,15 @@
     },
     {
       "resizing" : {
-        "mode" : "3-part-horizontal",
+        "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 1
+          "width" : 1,
+          "height" : 1
         },
         "cap-insets" : {
+          "bottom" : 39,
+          "top" : 38,
           "right" : 39,
           "left" : 39
         }
@@ -34,12 +40,15 @@
     },
     {
       "resizing" : {
-        "mode" : "3-part-horizontal",
+        "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 1
+          "width" : 1,
+          "height" : 1
         },
         "cap-insets" : {
+          "bottom" : 58,
+          "top" : 58,
           "right" : 58,
           "left" : 58
         }
