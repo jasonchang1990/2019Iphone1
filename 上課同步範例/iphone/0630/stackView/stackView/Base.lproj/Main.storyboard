@@ -30,11 +30,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPD-PB-29G">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="39"/>
                                         <state key="normal" title="Bicycle" backgroundImage="buttonBg"/>
+                                        <connections>
+                                            <action selector="leftBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upm-Zk-b1Q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-c1-9fC">
                                         <rect key="frame" x="100.5" y="0.0" width="139.5" height="39"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="9" maxY="0.0"/>
                                         <state key="normal" title="Bicycle_Bicycle" backgroundImage="buttonBg"/>
+                                        <connections>
+                                            <action selector="rightBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwZ-lq-D9r"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

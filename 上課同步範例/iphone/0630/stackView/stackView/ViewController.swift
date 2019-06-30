@@ -22,6 +22,20 @@ class ViewController: UIViewController {
         myImageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         myImageView.layer.shadowOpacity = 0.7
         myImageView.layer.shadowRadius = 5
+        
+        /*
+        var imageRect = myImageView.bounds;
+        imageRect.size = CGSize(width: 500, height: 500);
+ */
+        
+    }
+    
+    @IBAction func leftBtnClick(_ sender:UIButton){
+        print("leftBtnClick");
+    }
+    
+    @IBAction func rightBtnClick(_ sender:UIButton){
+        print("rightBtnClick");
     }
 
 
