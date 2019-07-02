@@ -143,7 +143,16 @@ class DataSource{
     }
     
     func selectedCity(searchWord:String)->[City]{
-        print(searchWord);
-        return [City()];
+        createDb();
+        let selectedSqlString = "SELECT * FROM city WHERE cityName like ? OR continent like ? OR description like ? OR country like ?"
+        var statement:OpaquePointer!;
+        if sqlite3_prepare_v2(DataSource.db, selectedSqlString, -1, &statement, nil) == SQLITE_OK{
+            print("prepare_v2 ok")
+        }else{
+            print("prepare_v2 error")
+            sqlite3_finalize(statement)
+        }
+        
+        return [City]();
     }
 }

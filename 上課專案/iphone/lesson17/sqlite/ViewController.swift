@@ -48,6 +48,11 @@ extension ViewController{
 extension ViewController:UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController){
         let searchBar = searchController.searchBar;
-        allCitys = DataSource.defaults.selectedCity(searchWord: searchBar.text!)
+        if let searchString = searchBar.text, searchString != ""{
+            allCitys = DataSource.defaults.selectedCity(searchWord: searchBar.text!)
+        }else{
+            allCitys = DataSource.defaults.allCitys;
+        }
+        tableView.reloadData();
     }
 }
