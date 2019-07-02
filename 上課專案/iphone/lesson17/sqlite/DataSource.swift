@@ -176,4 +176,8 @@ class DataSource{
         print(citys)
         return citys;
     }
+    
+    func deleteCity(cityName:String) -> Bool{
+        return true;
+    }
 }

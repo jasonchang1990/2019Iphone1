@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
         let dataSource = DataSource.defaults;
         allCitys = dataSource.allCitys;
         searchController.searchResultsUpdater = self;
+        searchController.dimsBackgroundDuringPresentation = false;
        
     }
 
@@ -42,6 +43,29 @@ extension ViewController{
         cell.countryLabel.text = city.country;
         cell.continentLabel.text = city.continent;
         return cell;
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            let index = indexPath.row
+            let city = allCitys[index];
+            
+            if DataSource.defaults.deleteCity(cityName: city.city!) {
+                print("delete 成功");
+                //searchController.isActive = false;
+                //allCitys = DataSource.defaults.allCitys;
+                let searchBar = searchController.searchBar;
+                if let searchString = searchBar.text, searchString != ""{
+                    allCitys = DataSource.defaults.selectedCity(searchWord: searchBar.text!)
+                    
+                }else{
+                    allCitys = DataSource.defaults.allCitys;
+                }
+                tableView.reloadData();
+            }else{
+                print("delete 失敗");
+            }
+        }
     }
 }
 
