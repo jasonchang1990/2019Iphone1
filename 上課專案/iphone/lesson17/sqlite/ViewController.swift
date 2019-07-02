@@ -50,6 +50,7 @@ extension ViewController:UISearchResultsUpdating{
         let searchBar = searchController.searchBar;
         if let searchString = searchBar.text, searchString != ""{
             allCitys = DataSource.defaults.selectedCity(searchWord: searchBar.text!)
+            
         }else{
             allCitys = DataSource.defaults.allCitys;
         }
