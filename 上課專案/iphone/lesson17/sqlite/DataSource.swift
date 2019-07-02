@@ -129,7 +129,8 @@ class DataSource{
             let city = City(city: cityName, continent: continent, country: country, image: image, local: description, lat: latitude, lon: longitude, url: url);
             citys.append(city);
         }
-        
+        sqlite3_finalize(statement)
+        sqlite3_close(DataSource.db)
         return citys;
     }
     
@@ -173,11 +174,37 @@ class DataSource{
             citys.append(city);
         }
         sqlite3_finalize(statement)
+        sqlite3_close(DataSource.db)
         print(citys)
         return citys;
     }
     
     func deleteCity(cityName:String) -> Bool{
+       
+        createDb();
+        let deleteSqlString = "DELETE FROM city where cityName = '\(cityName)'"
+        var statement:OpaquePointer!;
+        if sqlite3_prepare_v2(DataSource.db, deleteSqlString, -1, &statement, nil) == SQLITE_OK{
+            print("prepare_v2 ok")
+        }else{
+            print("prepare_v2 error")
+            sqlite3_finalize(statement)
+            return false;
+        }
+        
+        //sqlite3_bind_text(statement, 1, ("%\("Akihabara.jpg")%" as NSString).utf8String, -1, nil)
+       
+        
+        if sqlite3_step(statement) != SQLITE_DONE{
+            sqlite3_finalize(statement)
+            print("刪除失敗");
+            return false;
+        }
+        print("刪除成功");
+        
+ 
+       sqlite3_finalize(statement)
+        sqlite3_close(DataSource.db)
         return true;
     }
 }
