@@ -10,18 +10,19 @@ import UIKit
 
 class ViewController: UITableViewController {
     var allCitys:[City]!;
+    let searchController = UISearchController(searchResultsController: nil);
     
     override func awakeFromNib() {
         super.awakeFromNib()
         let dataSource = DataSource.defaults;
         allCitys = dataSource.allCitys;
-              
+        searchController.searchResultsUpdater = self;
        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.tableHeaderView = searchController.searchBar
     }
 
 
@@ -44,3 +45,9 @@ extension ViewController{
     }
 }
 
+extension ViewController:UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController){
+        let searchBar = searchController.searchBar;
+        print(searchBar.text!);
+    }
+}
