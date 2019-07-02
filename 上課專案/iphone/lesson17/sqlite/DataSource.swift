@@ -141,4 +141,9 @@ class DataSource{
             return;
         }
     }
+    
+    func selectedCity(searchWord:String)->[City]{
+        print(searchWord);
+        return [City()];
+    }
 }

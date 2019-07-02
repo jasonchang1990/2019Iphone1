@@ -29,4 +29,7 @@ class City{
         self.url = url;
         self.userRate = userRate;
     }
+    
+    init(){        
+    }
 }
