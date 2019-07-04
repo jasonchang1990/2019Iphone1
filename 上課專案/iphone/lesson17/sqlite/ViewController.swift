@@ -26,6 +26,12 @@ class ViewController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let dataSource = DataSource.defaults;
+        allCitys = dataSource.allCitys
+        tableView.reloadData()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goDetail" {
             let city = sender as? City;

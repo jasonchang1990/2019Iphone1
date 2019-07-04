@@ -21,6 +21,10 @@ class AddViewController: UITableViewController {
 
    
     @IBAction func userDone(_ sender:UIBarButtonItem){
-        
+        if DataSource.defaults.insertCity(cityName: cityField.text!, countryName: countryField.text!){
+            navigationController!.popToRootViewController(animated: true);
+        }else{
+            print("加入失敗");
+        }
     }
 }

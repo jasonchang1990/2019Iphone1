@@ -207,4 +207,36 @@ class DataSource{
         sqlite3_close(DataSource.db)
         return true;
     }
+    
+    func insertCity(cityName:String, countryName:String)->Bool{
+        createDb();
+        let selectedSqlString = "INSERT INTO city (cityName, country, continent, image, description, lat, lon, url) VALUES (?,?,?,?,?,?,?,?)"
+        var statement:OpaquePointer!;
+        if sqlite3_prepare_v2(DataSource.db, selectedSqlString, -1, &statement, nil) == SQLITE_OK{
+            print("prepare_v2 ok")
+        }else{
+            print("prepare_v2 error")
+            sqlite3_finalize(statement)
+            return false;
+        }
+        
+        sqlite3_bind_text(statement, 1, ("(cityName)" as NSString).utf8String, -1, nil)
+        sqlite3_bind_text(statement, 2, ("\(countryName)" as NSString).utf8String, -1, nil)
+        sqlite3_bind_text(statement, 3, ("asia" as NSString).utf8String, -1, nil)
+        sqlite3_bind_text(statement, 4, ("image1.jpg" as NSString).utf8String, -1, nil)
+        sqlite3_bind_text(statement, 5, ("" as NSString).utf8String, -1, nil)
+        sqlite3_bind_double(statement, 6, 23.1234)
+        sqlite3_bind_double(statement, 7, 21.5678)
+        sqlite3_bind_text(statement, 8, ("http://www.google.com.tw" as NSString).utf8String, -1, nil)
+        
+        
+        if sqlite3_step(statement) != SQLITE_DONE{
+            return false;
+        }
+        sqlite3_finalize(statement)
+        sqlite3_close(DataSource.db)
+        
+        return true;
+    }
+    
 }
