@@ -69,6 +69,15 @@ extension ViewController{
     }
 }
 
+extension ViewController{
+    //UITableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let selectedCity = allCitys[indexPath.row];
+        performSegue(withIdentifier: "goDetail", sender: selectedCity)
+    }
+    
+}
+
 extension ViewController:UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController){
         let searchBar = searchController.searchBar;

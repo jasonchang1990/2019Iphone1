@@ -18,6 +18,8 @@
 		E1A54B3B22B91A0B00679E12 /* citylist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A54B3A22B91A0B00679E12 /* citylist.plist */; };
 		E1A54B3D22B91D5500679E12 /* city.db in Resources */ = {isa = PBXBuildFile; fileRef = E1A54B3C22B91D5500679E12 /* city.db */; };
 		E1A54B3F22B91F3600679E12 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A54B3E22B91F3600679E12 /* DataSource.swift */; };
+		E1C6868522CE24F800BF10F5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C6868422CE24F800BF10F5 /* AddViewController.swift */; };
+		E1C6868722CE252900BF10F5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C6868622CE252900BF10F5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E1A54B3A22B91A0B00679E12 /* citylist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = citylist.plist; path = "../../../../iOS行動程式基礎開發上架20堂課/第10堂課建立以表格為基礎的App/資源檔/citylist.plist"; sourceTree = "<group>"; };
 		E1A54B3C22B91D5500679E12 /* city.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = city.db; sourceTree = "<group>"; };
 		E1A54B3E22B91F3600679E12 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		E1C6868422CE24F800BF10F5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		E1C6868622CE252900BF10F5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				E1A54B3422B9196200679E12 /* Info.plist */,
 				E125C42422C4E77600FBA8EE /* City.swift */,
 				E125C42622C4FB9400FBA8EE /* CityCell.swift */,
+				E1C6868422CE24F800BF10F5 /* AddViewController.swift */,
+				E1C6868622CE252900BF10F5 /* DetailViewController.swift */,
 			);
 			path = sqlite;
 			sourceTree = "<group>";
@@ -166,9 +172,11 @@
 			files = (
 				E1A54B3F22B91F3600679E12 /* DataSource.swift in Sources */,
 				E1A54B2B22B9196100679E12 /* ViewController.swift in Sources */,
+				E1C6868522CE24F800BF10F5 /* AddViewController.swift in Sources */,
 				E125C42722C4FB9400FBA8EE /* CityCell.swift in Sources */,
 				E125C42522C4E77600FBA8EE /* City.swift in Sources */,
 				E1A54B2922B9196100679E12 /* AppDelegate.swift in Sources */,
+				E1C6868722CE252900BF10F5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
