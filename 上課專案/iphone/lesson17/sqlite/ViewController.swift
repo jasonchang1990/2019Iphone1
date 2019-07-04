@@ -25,6 +25,14 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         tableView.tableHeaderView = searchController.searchBar
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goDetail" {
+            let city = sender as? City;
+            let detailViewController = segue.destination as! DetailViewController;
+            detailViewController.city = city;
+        }
+    }
 
 
 }
