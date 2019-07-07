@@ -10,10 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var cityList:UITextView!;
-    
+    var namesString = "";
     override func viewDidLoad() {
         super.viewDidLoad()
-        cityList.text = DataSource.names.description
+        for cityName in DataSource.names{
+            namesString += "\(cityName)\n\n"
+        }
+        cityList.text = namesString;
+       
     }
 
 
