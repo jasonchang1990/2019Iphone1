@@ -10,9 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     var dataSource = DataSource();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("city的數量\(dataSource.citys.count)");
     }
 
 
