@@ -70,3 +70,41 @@ print(square.origin.x);
 print(square.origin.y);
 
 
+//read-only computed propert
+struct Cuboid{
+    var width = 0.0, height = 0.0, depth = 0.0;
+    /*
+    func valume() -> Double{
+        return width * height * depth;
+    }
+ */
+    var valume:Double{
+        return width * height * depth;
+    }
+}
+
+let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 3.0)
+
+print(fourByFiveByTwo.valume);
+
+
+//propety observer(一定要有store property)
+class StepCounter{
+    var totalStep:Int = 0 {
+        willSet{
+            print("現在傳進的值:\(newValue)");
+        }
+        
+        didSet{
+            if totalStep > oldValue{
+                print("在現有的值下，增加了\(totalStep - oldValue)");
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter();
+stepCounter.totalStep = 200;
+
+stepCounter.totalStep = 360;
+stepCounter.totalStep = 896;
