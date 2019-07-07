@@ -12,6 +12,7 @@
 		E1ADD45F22D19F0600E599E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ADD45D22D19F0600E599E4 /* Main.storyboard */; };
 		E1ADD46122D19F0800E599E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1ADD46022D19F0800E599E4 /* Assets.xcassets */; };
 		E1ADD46422D19F0800E599E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ADD46222D19F0800E599E4 /* LaunchScreen.storyboard */; };
+		E1ADD46C22D1A01600E599E4 /* citylist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1ADD46B22D1A01600E599E4 /* citylist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E1ADD46022D19F0800E599E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1ADD46322D19F0800E599E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1ADD46522D19F0800E599E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1ADD46B22D1A01600E599E4 /* citylist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = citylist.plist; path = "../../../../iOS行動程式基礎開發上架20堂課/第10堂課建立以表格為基礎的App/資源檔/citylist.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		E1ADD45822D19F0600E599E4 /* citys07_07 */ = {
 			isa = PBXGroup;
 			children = (
+				E1ADD46B22D1A01600E599E4 /* citylist.plist */,
 				E1ADD45922D19F0600E599E4 /* AppDelegate.swift */,
 				E1ADD45B22D19F0600E599E4 /* ViewController.swift */,
 				E1ADD45D22D19F0600E599E4 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1ADD46422D19F0800E599E4 /* LaunchScreen.storyboard in Resources */,
+				E1ADD46C22D1A01600E599E4 /* citylist.plist in Resources */,
 				E1ADD46122D19F0800E599E4 /* Assets.xcassets in Resources */,
 				E1ADD45F22D19F0600E599E4 /* Main.storyboard in Resources */,
 			);
